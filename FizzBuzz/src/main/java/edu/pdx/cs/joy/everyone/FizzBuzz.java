@@ -8,7 +8,7 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public class Kata {
+public class FizzBuzz {
 
   @VisibleForTesting
   public static void main(String[] args) {
