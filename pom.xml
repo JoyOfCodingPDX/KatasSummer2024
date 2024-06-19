@@ -24,6 +24,7 @@ accordingly
   <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingSummer2024</url>
 
   <modules>
+    <module>FizzBuzz</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
