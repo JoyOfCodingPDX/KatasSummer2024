@@ -34,9 +34,9 @@
     </developer>
     <developer>
       <id>student1</id>
-      <name>FirstName LastName</name>
+      <name>Andrew Howard</name>
       <roles>
-        <role>Driver/Navigator</role>
+        <role>Driver</role>
       </roles>
     </developer>
     <developer>
