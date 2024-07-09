@@ -25,4 +25,10 @@ public class FizzBuzzTest
     assertThat(fizzBuzz.fizzBuzz(2),equalTo("2"));
   }
 
+  @Test
+  void FizzBuzzOfThree() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    assertThat(fizzBuzz.fizzBuzz(3),equalTo("Fizz"));
+  }
+
 }
