@@ -14,4 +14,8 @@ public class FizzBuzz {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public String fizzBuzz(int i) {
+    return null;
+  }
 }
