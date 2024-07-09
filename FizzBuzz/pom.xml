@@ -35,34 +35,58 @@
     <developer>
       <id>student1</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student2</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student3</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student4</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student5</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student6</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student7</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
     <developer>
       <id>student8</id>
       <name>FirstName LastName</name>
+      <roles>
+        <role>Driver/Navigator</role>
+      </roles>
     </developer>
   </developers>
 
