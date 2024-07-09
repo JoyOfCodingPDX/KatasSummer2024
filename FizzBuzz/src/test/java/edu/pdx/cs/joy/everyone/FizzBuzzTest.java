@@ -16,7 +16,13 @@ public class FizzBuzzTest
   @Test
   void fizzBuzzOfOne() {
     FizzBuzz fizzBuzz = new FizzBuzz();
-    assertThat(fizzBuzz.fizzBuzz(1),equalTo(1));
+    assertThat(fizzBuzz.fizzBuzz(1),equalTo("1"));
+  }
+
+  @Test
+  void fizzBuzzOfTwo() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    assertThat(fizzBuzz.fizzBuzz(2),equalTo("2"));
   }
 
 }

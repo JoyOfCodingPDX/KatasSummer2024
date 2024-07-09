@@ -16,6 +16,8 @@ public class FizzBuzz {
   }
 
   public String fizzBuzz(int i) {
-    return null;
+    return String.valueOf(i);
+
   }
+
 }
