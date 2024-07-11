@@ -6,8 +6,9 @@ import com.google.common.annotations.VisibleForTesting;
  * A class for getting started with a code kata
  */
 public class LeapYears {
-public boolean leapYears(String year) {
-
+public boolean leapYears(String year)
+{
+  return true;
 }
   @VisibleForTesting
   public static void main(String[] args) {
