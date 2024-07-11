@@ -19,6 +19,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <id>student1</id>
+      <name>Tommy Trakoolthai</name>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Sarah Dylan</name>
+    </developer>
+    <developer>
+      <id>student3</id>
+      <name>Roha Khan</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
