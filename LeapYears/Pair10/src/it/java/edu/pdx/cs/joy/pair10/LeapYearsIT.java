@@ -17,8 +17,8 @@ class LeapYearsIT extends InvokeMainTestCase {
 
   @Test
   void canGetStringFromUser() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
-    assertEquals(Integer.parseInt(result.getTextWrittenToStandardOut()), int.class);
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2000");
+    assertEquals(Integer.parseInt(result.getTextWrittenToStandardOut()), 2000);
   }
 
 
