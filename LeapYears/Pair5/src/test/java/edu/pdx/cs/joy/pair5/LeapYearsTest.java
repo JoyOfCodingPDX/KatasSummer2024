@@ -13,18 +13,31 @@ public class LeapYearsTest
   @Test
   void isLeapYearFor400(){
     LeapYears leapYears = new LeapYears();
-    Boolean isLeap = leapYears.isLeapYear(400);
+    boolean isLeap = leapYears.isLeapYear(2000);
     assert (isLeap);
   }
 
   @Test
   void isLeapYearFor100Not400(){
     LeapYears leapYears = new LeapYears();
-    Boolean isLeap = leapYears.isLeapYear(100);
+    boolean isLeap = leapYears.isLeapYear(1700);
     assert (isLeap);
   }
 
   @Test
-  void isLeapYearFor4Not100(){}
+  void isLeapYearFor4Not100(){
+    LeapYears leapYears = new LeapYears();
+    boolean isLeap = leapYears.isLeapYear(2008);
+    assert (isLeap);
+  }
+
+  @Test
+  void isLeapYearFor4(){
+    LeapYears leapYears = new LeapYears();
+    boolean isLeap = leapYears.isLeapYear(2020);
+    assert (isLeap);
+  }
+
+
 
 }
