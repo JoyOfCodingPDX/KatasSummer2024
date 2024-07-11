@@ -12,7 +12,7 @@ public class LeapYearsTest
   @Test
   void canInstantiateKataClass() {
     Object testLeapYears =  new LeapYears();
-    assertThat(testLeapYears, equalTo("A year") );
+    assertThat(testLeapYears, equalTo("A Leap year") );
   }
 
 }
