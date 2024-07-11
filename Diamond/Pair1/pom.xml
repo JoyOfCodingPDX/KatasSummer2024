@@ -39,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair1.Diamond</mainClass>
             </manifest>
           </archive>
         </configuration>
