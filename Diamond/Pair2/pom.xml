@@ -6,13 +6,13 @@
     <artifactId>diamond-parent</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pair1</groupId>
+  <groupId>edu.pdx.cs.joy.pair2</groupId>
   <artifactId>diamond</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Diamond 1</name>
-  <description>Diamond kata for Pair 1</description>
+  <name>Diamond 2</name>
+  <description>Diamond kata Pair 2</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -39,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.Diamond</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair2.Diamond</mainClass>
             </manifest>
           </archive>
         </configuration>
