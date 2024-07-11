@@ -26,7 +26,11 @@
     </developer>
     <developer>
       <id>student2</id>
-      <name>Tanner Blake </name>
+<<<<<<< HEAD
+      <name>Tanner Blake</name>
+=======
+      <name>Isaac Dochow</name>
+>>>>>>> 845aad52160801dad51b4327de7d135fcdd3fb30
     </developer>
   </developers>
 
