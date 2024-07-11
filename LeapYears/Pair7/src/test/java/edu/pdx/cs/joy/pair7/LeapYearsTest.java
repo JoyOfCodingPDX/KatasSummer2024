@@ -33,4 +33,21 @@ public class LeapYearsTest
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.leap_year(2025), equalTo(false));
   }
+  @Test
+  void leap_year_2100() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.leap_year(2100), equalTo(false));
+  }
+
+  @Test
+  void leap_year_2040() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.leap_year(2040), equalTo(true));
+  }
+
+  @Test
+  void leap_year_2039() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.leap_year(2039), equalTo(false));
+  }
 }
