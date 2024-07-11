@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.Pair1.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair1.Kata</mainClass>
             </manifest>
           </archive>
         </configuration>

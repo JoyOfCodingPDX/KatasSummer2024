@@ -1,4 +1,4 @@
-package edu.pdx.cs.joy.Pair1;
+package edu.pdx.cs.joy.pair1;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
 import org.junit.jupiter.api.Test;
