@@ -11,9 +11,8 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
 
-    int [] years = {2001, 2000, 2010, 2020, 2030, 2040};
-    for(int year : years){
-
+    //int [] years = {2001, 2000, 2010, 2020, 2030, 2040};
+    for(int year = 0; year <= 2000; year += 3){
       System.out.print("Year : " + year);
       if(leap_year(year)){
         System.out.println(" is a leap year");
