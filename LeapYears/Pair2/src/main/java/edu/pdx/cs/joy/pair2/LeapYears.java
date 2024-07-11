@@ -14,10 +14,10 @@ public class LeapYears {
       return true;
     } else if (year % 400 != 0) {
       return false;
-    } else if (year % 4000 != 1) {
-      return false;
-    }
+    } else if (year % 4000 != 1 ) {
       return true;
+    }
+    return false;
   }
 
   @VisibleForTesting
