@@ -14,24 +14,20 @@ public class LeapYearsTest
   }
 
   @Test
-  void input2000() {
-    LeapYears.LeapYear = new LeapYear();
-    assertThat(LeapYears.LeapYear(2000),equalTo("1"));
+  void year2000IsALeapYear() {
+    LeapYears lp = new LeapYear();
+    assertTrue(lp.isLeapYear(2000));
   }
 
-  void input1900() {
-    LeapYears.LeapYear = new LeapYear();
-    assertThat(LeapYears.LeapYear(1900),equalTo("0"));
+  @Test
+  void notDivisibleBy4ReturnsFalse() {
+    LeapYears lp = new LeapYear();
+    assertFalse(lp.isLeapYear(1));
   }
 
-  void input2008() {
-    LeapYears.LeapYear = new LeapYear();
-    assertThat(LeapYears.LeapYear(2008),equalTo("1"));
+  @Test
+  void divisibleBy4ButNotBy100AreLeapYears() {
+    LeapYears lp = new LeapYear();
+    assertTrue(lp.isLeapYear(2008));
   }
-
-  void input2017() {
-    LeapYears.LeapYear = new LeapYear();
-    assertThat(LeapYears.LeapYear(2017),equalTo("0"));
-  }
-
 }
