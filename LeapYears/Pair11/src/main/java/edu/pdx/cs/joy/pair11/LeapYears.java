@@ -12,6 +12,16 @@ public class LeapYears {
       return result == 0;
   }
 
+  public static boolean onehundred(final int num) {
+    int result = num % 100;
+    return result != 0;
+  }
+
+  public static boolean four(final int num) {
+    int result = num % 4;
+    return result == 0;
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
