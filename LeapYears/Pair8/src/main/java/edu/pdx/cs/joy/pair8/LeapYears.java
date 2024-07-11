@@ -7,21 +7,29 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
-  @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-  }
+    @VisibleForTesting
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.err.println("Missing command line arguments");
+            return;
+        }
 
-  public boolean isLeapYear(int i) {
-    if (i % 400 == 0) {
-      return true;
+        LeapYears leapYears = new LeapYears();
+        int year = Integer.parseInt(args[0]);
+        if (leapYears.isLeapYear(year)) {
+            System.out.println("Leap year " + year + " is a leap year");
+        } else {
+            System.out.println("Leap year " + year + " is not a leap year");
+        }
     }
-    else if (i % 100 == 0) {
-      return false;
+
+    public boolean isLeapYear(int i) {
+        if (i % 400 == 0) {
+            return true;
+        } else if (i % 100 == 0) {
+            return false;
+        } else if (i % 4 == 0) {
+            return true;
+        } else return false;
     }
-    else if (i % 4 == 0) {
-      return true;
-    }
-    else return false;
-  }
 }

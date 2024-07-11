@@ -13,6 +13,9 @@ public class LeapYears {
   }
 
   public boolean isLeapYear (int year) {
+    if (year < 1582) {
+      throw new IllegalArgumentException("Year is out of bounds: Please put a year greater than 1581.");
+    }
     if (year % 400 == 0) {
       return true;
     }
