@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair1;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class LeapYearsTest
 {
 
@@ -15,14 +17,15 @@ public class LeapYearsTest
   {
 
     // Assemble
-    string input = "4000";
+    int input = 4000;
     LeapYears calculator = new LeapYears();
 
     //Act
     boolean response = calculator.dividesBy400(input);
     //Assert
-
-
+    assertEquals(response, true);
   }
+
+
 
 }
