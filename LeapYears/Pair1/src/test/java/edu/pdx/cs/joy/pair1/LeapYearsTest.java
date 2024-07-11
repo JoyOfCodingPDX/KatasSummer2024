@@ -11,16 +11,17 @@ public class LeapYearsTest
   }
 
   @Test
-  void divisibleby400returnsleapyear()
+  void divisibleby400returnsTrue()
   {
 
     // Assemble
-    string input = "400";
-    LeapYears calculator = new LeapYears(input);
+    string input = "4000";
+    LeapYears calculator = new LeapYears();
 
     //Act
-
+    boolean response = calculator.dividesBy400(input);
     //Assert
+
 
   }
 
