@@ -25,9 +25,20 @@ public class LeapYearsTest
   @Test
   void tooEarlyCheck() {
     LeapYears leapYears = new LeapYears();
+
     assertThrows(IllegalArgumentException.class, () -> {
       leapYears.isLeapYear(500);
     });
+  }
+
+  @Test
+  void tooEarlyTryCatchCheck() {
+    try {
+      leapYears.isLeapYear(500);
+      fail("Expected an IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+      assertThat(e.contains("Year is out of bounds: Please put a year greater than 1581"), equals(true));
+    }
   }
 
   @Test
