@@ -20,10 +20,12 @@ public class LeapYears {
   public static void main(String[] args) {
     LeapYears leap_year = new LeapYears();
     // System.err.println("Missing command line arguments");
-    if (args.length <= 1) {
-      int year = Integer.parseInt(args[0]);
+    if (args.length < 1) {
+      System.err.println("Missing command line arguments");
+      return;
     }
 
+    int year = Integer.parseInt(args[0]);
     System.out.println(leap_year.isLeapYear(year));
   }
 }
