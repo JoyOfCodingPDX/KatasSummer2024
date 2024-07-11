@@ -10,9 +10,15 @@ public class LeapYearsTest
 {
 
   @Test
-  void canInstantiateKataClass() {
-    Object testLeapYears =  new LeapYears();
-    assertThat(testLeapYears, equalTo("A Leap year") );
+  void leapYearHasDefaultVariable() {
+    LeapYears testLeapYears =  new LeapYears();
+    assertThat(testLeapYears.getYear(), equalTo(0) );
+  }
+
+  @Test
+  void leapYearIsAnInteger() {
+    LeapYears testLeapYears =  new LeapYears();
+    assertThat(testLeapYears.getYear() getClass(), equalTo(int.class));
   }
 
 }
