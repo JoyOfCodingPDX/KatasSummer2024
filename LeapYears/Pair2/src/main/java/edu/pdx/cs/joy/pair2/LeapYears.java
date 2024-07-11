@@ -26,4 +26,7 @@ public class LeapYears {
   }
 
 
+  public static String LeapYear(int i) {
+    return null;
+  }
 }

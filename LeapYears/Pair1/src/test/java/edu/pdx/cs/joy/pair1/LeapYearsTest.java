@@ -55,7 +55,7 @@ public class LeapYearsTest
   {
     int input = 2000;
     LeapYears calculator = new LeapYears();
-    boolean response = calculator.algorithm(input);
+    boolean response = calculator.algorithgm(input);
 
     assertEquals(response, true);
   }
