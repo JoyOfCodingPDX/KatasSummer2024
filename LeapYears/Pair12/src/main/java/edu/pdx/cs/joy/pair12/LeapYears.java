@@ -24,7 +24,7 @@ public class LeapYears {
       int year = Integer.parseInt(args[0]);
 
     }
-    catch (Exception e) {
+    catch (NumberFormatException e) {
       System.err.println("Invalid year");
       return;
     }

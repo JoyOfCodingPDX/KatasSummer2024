@@ -45,6 +45,10 @@ public class LeapYearsTest
 
   @Test
   void invalidYear() {
-    LeapYears
+    String year[] = {"year"};
+    assertThrows(Exception.class, () -> {
+      LeapYears leapYear = new LeapYears();
+      leapYear.main(year);
+    });
   }
 }
