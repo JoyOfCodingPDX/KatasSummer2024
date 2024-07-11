@@ -9,6 +9,35 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    if (args.length > 1) {
+      System.err.println("Enter only one year");
+      return;
+    }
+
+    try {
+      int year = Integer.parseInt(args[0]);
+
+    }
+    catch (Exception e) {
+      System.err.println("Invalid year");
+      return;
+    }
+  }
+
+  public static boolean leapYear(int i) {
+    if (i % 400 == 0) {
+      return true;
+    } else if (i % 100 == 0) {
+      return false;
+    } else if (i % 4 == 0) {
+      return true;
+    }
+    return false;
   }
 }
