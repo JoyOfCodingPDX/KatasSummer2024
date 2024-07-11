@@ -21,15 +21,14 @@
 
   <developers>
     <developer>
-      <id>student1</id>
-      <name>FirstName LastName</name>
+      <id>henrycolesides</id>
+      <name>Henry Sides</name>
     </developer>
     <developer>
-      <id>student2</id>
-      <name>FirstName LastName</name>
+      <id>angelinevu</id>
+      <name>Angeline Vu</name>
     </developer>
   </developers>
-
   <build>
     <plugins>
       <plugin>
