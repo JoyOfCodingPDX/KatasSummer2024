@@ -15,17 +15,26 @@ public class LeapYearsTest {
 
     @Test
     void isDivisibleBy400() {
-        assertEquals(leapYears.isLeapYear(400), true);
+        assertEquals(leapYears.isLeapYear(2000), true);
     }
 
     @Test
     void isDivisibleBy100Not400() {
-        assertEquals(leapYears.isLeapYear(100), false);
+        assertEquals(leapYears.isLeapYear(1700), false);
+        assertEquals(leapYears.isLeapYear(1800), false);
+        assertEquals(leapYears.isLeapYear(1900), false);
     }
 
     @Test
     void isDivisibleBy4Not100() {
-        assertEquals(leapYears.isLeapYear(4), true);
+        assertEquals(leapYears.isLeapYear(2008), true);
+        assertEquals(leapYears.isLeapYear(2012), true);
+        assertEquals(leapYears.isLeapYear(2016), true);
+    }
+
+    @Test
+    void allYearsNotDivisibleBy4() {
+
     }
 
 }

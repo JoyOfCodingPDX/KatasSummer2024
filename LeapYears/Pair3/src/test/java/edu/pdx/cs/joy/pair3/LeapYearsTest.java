@@ -23,4 +23,20 @@ public class LeapYearsTest {
   void fourhundredIsALeapYear() {
     assertThat(leap_year.isLeapYear(400), equalTo(true));
   }
+
+  @Test
+  void hundredIsNotALeapYear() {
+    assertThat(leap_year.isLeapYear(100), equalTo(false));
+  }
+
+  @Test
+  void fiveHundredIsNotALeapYear() {
+    assertThat(leap_year.isLeapYear(500), equalTo(false));
+  }
+
+  @Test
+  void twentyIsALeapYear() {
+    assertThat(leap_year.isLeapYear(20), equalTo(true));
+  }
+
 }
