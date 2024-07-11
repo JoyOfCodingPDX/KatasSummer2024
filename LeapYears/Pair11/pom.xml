@@ -25,11 +25,10 @@
       <name>FirstName LastName</name>
     </developer>
     <developer>
-      <id>student2</id>
-      <name>FirstName LastName</name>
+      <id>angelinevu</id>
+      <name>Angeline Vu</name>
     </developer>
   </developers>
-
   <build>
     <plugins>
       <plugin>
