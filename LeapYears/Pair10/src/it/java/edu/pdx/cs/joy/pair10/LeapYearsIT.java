@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LeapYearsIT extends InvokeMainTestCase {
 
@@ -12,6 +13,12 @@ class LeapYearsIT extends InvokeMainTestCase {
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+  }
+
+  @Test
+  void canGetStringFromUser() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
+    assertEquals(result.getTextWrittenToStandardOut().getClass(), String.class);
   }
 
 
