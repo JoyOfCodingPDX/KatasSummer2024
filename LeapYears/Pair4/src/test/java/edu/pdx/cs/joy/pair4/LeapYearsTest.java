@@ -28,5 +28,4 @@ public class LeapYearsTest
 
     assertEquals(result, false);
   }
-
 }
