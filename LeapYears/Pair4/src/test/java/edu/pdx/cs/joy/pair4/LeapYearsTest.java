@@ -29,4 +29,10 @@ public class LeapYearsTest
     assertEquals(result, false);
   }
 
+  @Test
+  void testYearMultipleOf4ButNot100IsLeapYear() {
+    boolean result = year.isLeapYear(2008);
+
+    assertEquals(result, false);
+  }
 }

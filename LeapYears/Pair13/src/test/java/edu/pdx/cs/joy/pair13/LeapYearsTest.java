@@ -6,8 +6,18 @@ public class LeapYearsTest
 {
 
   @Test
-  void canInstantiateKataClass() {
+  void canInstantiateKataClass()
+  {
     new LeapYears();
   }
 
+  @Test
+  void isAnInt()
+  {
+    LeapYears leapYears = new LeapYears();
+    assertThat
+
+  }
 }
+
+
