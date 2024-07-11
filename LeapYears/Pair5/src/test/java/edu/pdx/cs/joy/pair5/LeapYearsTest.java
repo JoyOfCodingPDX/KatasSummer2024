@@ -21,7 +21,7 @@ public class LeapYearsTest
   void isLeapYearFor100Not400(){
     LeapYears leapYears = new LeapYears();
     boolean isLeap = leapYears.isLeapYear(1700);
-    assert (isLeap);
+    assert (!isLeap);
   }
 
   @Test

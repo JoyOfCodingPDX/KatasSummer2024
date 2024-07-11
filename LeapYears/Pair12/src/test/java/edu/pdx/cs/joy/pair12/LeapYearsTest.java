@@ -43,12 +43,22 @@ public class LeapYearsTest
     assertFalse(LeapYears.leapYear(2017));
   }
 
-  @Test
-  void invalidYear() {
+  //@Test
+  /*void invalidYear() {
     String year[] = {"year"};
     assertThrows(Exception.class, () -> {
       LeapYears leapYear = new LeapYears();
       leapYear.main(year);
     });
+  }*/
+
+  @Test
+  void printErrorWithInvalidYear() {
+    String year[] = {"year"};
+    assertEquals();
   }
+}
+
+public class printTest {
+  String year[] = {"year"};
 }

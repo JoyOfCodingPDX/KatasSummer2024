@@ -16,6 +16,13 @@ public class LeapYears {
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+
+    try {
+      year = Integer.parseInt(args[0]);
+    }
+    catch (NumberFormatException e) {
+      System.err.println("Invalid year");
+    }
   }
 
   public static int getYear() {

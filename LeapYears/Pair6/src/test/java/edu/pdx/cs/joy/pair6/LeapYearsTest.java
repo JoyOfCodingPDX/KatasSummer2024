@@ -1,7 +1,7 @@
 package edu.pdx.cs.joy.pair6;
 
 import org.junit.jupiter.api.Test;
-import static org.hamcrest.MatcherAssert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
