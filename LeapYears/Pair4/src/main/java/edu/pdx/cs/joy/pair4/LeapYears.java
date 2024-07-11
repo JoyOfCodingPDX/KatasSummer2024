@@ -16,11 +16,24 @@ public class LeapYears {
       return;
     }
 
+    int year = -1;
     LeapYears leapYears = new LeapYears();
-    int year = parseInt(args[0]);
+    try{
+      year = parseInt(args[0]);
+    }
+    catch(NumberFormatException e)
+    {
+      System.err.println("Input must be a number.");
+      System.exit(1);
+    }
+    
 
     if (leapYears.isLeapYear(year)) {
-
+      System.out.println(year + " is a Leap year.");
+    }
+    else
+    {
+      System.out.println(year + " is not a Leap year.");
     }
   }
 
