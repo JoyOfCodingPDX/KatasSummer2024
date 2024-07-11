@@ -13,9 +13,21 @@ public class LeapYearsTest
   }
 
   @Test
-  void leapYearCheck(){
+  void isLeapYearCheck(){
     LeapYears leapYears = new LeapYears();
-    assertThat.(leapYears.isLeapYear(2024), equalTo(true))
+    assertThat(leapYears.isLeapYear(2024), equalTo(true));
+    assertThat(leapYears.isLeapYear(2008), equalTo(true));
+    assertThat(leapYears.isLeapYear(1968), equalTo(true));
+    assertThat(leapYears.isLeapYear(1956), equalTo(true));
+  }
+
+  @Test
+  void areNotLeapYearsCheck(){
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(2023), equalTo(false));
+    assertThat(leapYears.isLeapYear(2005), equalTo(false));
+    assertThat(leapYears.isLeapYear(2003), equalTo(false));
+    assertThat(leapYears.isLeapYear(1975), equalTo(false));
   }
 
 }
