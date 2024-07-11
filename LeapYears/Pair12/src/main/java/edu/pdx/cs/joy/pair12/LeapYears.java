@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair12;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+
 /**
  * A class for getting started with a code kata
  */
@@ -22,7 +24,10 @@ public class LeapYears {
 
     try {
       int year = Integer.parseInt(args[0]);
-
+      if (year < 0) {
+        System.err.println("Invalid year");
+        return;
+      }
     }
     catch (NumberFormatException e) {
       System.err.println("Invalid year");
@@ -40,4 +45,5 @@ public class LeapYears {
     }
     return false;
   }
+
 }

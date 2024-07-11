@@ -9,7 +9,13 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    LeapYears leapYears = new LeapYears();
+    if(leapYears.isLeapYear(2000)) {
+      System.out.println("Is a leap year");
+    }else{
+      System.out.println("Is not a leap year");
+    }
+    //System.err.println("Missing command line arguments");
   }
 
   public boolean isLeapYear(int year) {

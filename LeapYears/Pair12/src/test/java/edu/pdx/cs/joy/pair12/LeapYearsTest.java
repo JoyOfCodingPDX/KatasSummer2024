@@ -52,13 +52,5 @@ public class LeapYearsTest
     });
   }*/
 
-  @Test
-  void printErrorWithInvalidYear() {
-    String year[] = {"year"};
-    assertEquals();
-  }
 }
 
-public class printTest {
-  String year[] = {"year"};
-}

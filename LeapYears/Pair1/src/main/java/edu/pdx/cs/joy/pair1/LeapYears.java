@@ -20,4 +20,20 @@ public class LeapYears {
     if ((input % 400) == 0) return true;
     return false;
   };
+
+  public boolean dividesBy100(int input) {
+    if ((input % 100) == 0) return true;
+    return false;
+  }
+
+  public boolean dividesBy4(int input) {
+    if ((input % 4) == 0) return true;
+    return false;
+  }
+
+  public boolean algorithgm(int input){
+    if (dividesBy400(input)) return true;
+    if (dividesBy100(input)) return false;
+    return false;
+  }
 }

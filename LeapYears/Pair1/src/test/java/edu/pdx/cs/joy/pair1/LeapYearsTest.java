@@ -13,7 +13,7 @@ public class LeapYearsTest
   }
 
   @Test
-  void divisibleby400returnsTrue()
+  void multipleOf400dividesBy400returnsTrue()
   {
 
     // Assemble
@@ -25,7 +25,40 @@ public class LeapYearsTest
     //Assert
     assertEquals(response, true);
   }
+  @Test
+  void multipleOf100divisidesBy100ReturnsTrue()
+  {
+    int input = 1000;
+    LeapYears calculator = new LeapYears();
 
+    //Act
+    boolean response = calculator.dividesBy100(input);
+    //Assert
+    assertEquals(response, true);
+
+  }
+  @Test
+  void multipleOfFourDividesBy4IsTrue()
+  {
+    int input = 44;
+    LeapYears calculator = new LeapYears();
+
+    //Act
+    boolean response = calculator.dividesBy4(input);
+    //Assert
+    assertEquals(response, true);
+
+  }
+
+  @Test
+  void realLeapYearAlgorithmreturnsTrue()
+  {
+    int input = 2000;
+    LeapYears calculator = new LeapYears();
+    boolean response = calculator.algorithm(input);
+
+    assertEquals(response, true);
+  }
 
 
 }
