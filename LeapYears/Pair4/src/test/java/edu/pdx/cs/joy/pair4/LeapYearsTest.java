@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 public class LeapYearsTest
 {
 
+  LeapYears year = new LeapYears();
   @Test
   void canInstantiateKataClass() {
     new LeapYears();
@@ -15,10 +16,17 @@ public class LeapYearsTest
   @Test
   void testYearMultipleOf400IsLeapYear()
   {
-    LeapYears year = new LeapYears();
     boolean result = year.isLeapYear(400);
 
     assertEquals(result, true);
+  }
+
+  @Test
+  void testYearMultipleOf100ButNot400IsNotLeapYear()
+  {
+    boolean result = year.isLeapYear(500);
+
+    assertEquals(result, false);
   }
 
 }
