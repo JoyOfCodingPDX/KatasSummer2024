@@ -11,14 +11,18 @@ public class LeapYearsTest
 
   @Test
   void leapYearHasDefaultVariable() {
-    LeapYears testLeapYears =  new LeapYears();
+    LeapYears testLeapYears =  new LeapYears(0);
     assertThat(testLeapYears.getYear(), equalTo(0) );
   }
 
+//  @Test
+//  void leapYearIsAnInteger() {
+//    LeapYears testLeapYears =  new LeapYears();
+//    assertThat(testLeapYears.getYear().getClass(), equalTo(int.class));
+//  }
   @Test
-  void leapYearIsAnInteger() {
-    LeapYears testLeapYears =  new LeapYears();
-    assertThat(testLeapYears.getYear() getClass(), equalTo(int.class));
+  void yearCanBeDividedBy400() {
+    LeapYears testLeapYears =  new LeapYears(400);
+    assertThat(testLeapYears.isLeapYear() , equalTo(true));
   }
-
 }
