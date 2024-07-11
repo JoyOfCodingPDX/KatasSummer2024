@@ -8,7 +8,9 @@ import com.google.common.annotations.VisibleForTesting;
 public class LeapYears {
 
   public boolean isLeapYear(int year) {
-    return false;
+    if (year%400 == 0) return true;
+
+    else return false;
   }
 
   @VisibleForTesting

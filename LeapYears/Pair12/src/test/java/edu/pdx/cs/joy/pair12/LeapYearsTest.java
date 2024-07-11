@@ -31,4 +31,20 @@ public class LeapYearsTest
     assertFalse(LeapYears.leapYear(1700));
   }
 
+  @Test
+  void divisbleBy4ButNot100() {
+    LeapYears leapYear = new LeapYears();
+    assertTrue(LeapYears.leapYear(2008));
+  }
+
+  @Test
+  void notDivisbleBy4() {
+    LeapYears leapYear = new LeapYears();
+    assertFalse(LeapYears.leapYear(2017));
+  }
+
+  @Test
+  void invalidYear() {
+    LeapYears
+  }
 }
