@@ -26,7 +26,11 @@
     </developer>
     <developer>
       <id>student2</id>
-      <name>FirstName LastName</name>
+      <name>Sarah Dylan</name>
+    </developer>
+    <developer>
+      <id>student3</id>
+      <name>Roha Khan</name>
     </developer>
   </developers>
 
