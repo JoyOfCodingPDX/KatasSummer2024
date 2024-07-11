@@ -12,4 +12,12 @@ public class LeapYearsTest
     LeapYears lp = new LeapYears();
     assertEquals(lp.getClass(), LeapYears.class);
   }
+  @Test
+  void fourHundredisLeapYear() {
+    assertEquals(LeapYears.fourhundred(400), true);
+    assertEquals(LeapYears.fourhundred(2000), true);
+    assertEquals(LeapYears.fourhundred(-400), true);
+    assertEquals(LeapYears.fourhundred(401), false);
+    assertEquals(LeapYears.fourhundred(1), false);
+  }
 }

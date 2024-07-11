@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair13;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class LeapYearsTest
 {
 
@@ -15,7 +17,7 @@ public class LeapYearsTest
   void isAnInt()
   {
     LeapYears leapYears = new LeapYears();
-    assertThat
+    assertThat(leapYears.leapYears("2000"),equalTo(true));
 
   }
 }
