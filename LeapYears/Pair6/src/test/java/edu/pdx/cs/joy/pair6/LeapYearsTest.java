@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pair6;
 
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThrows;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -22,6 +23,14 @@ public class LeapYearsTest
   }
 
   @Test
+  void tooEarlyCheck() {
+    LeapYears leapYears = new LeapYears();
+    assertThrows(IllegalArgumentException.class, () -> {
+      leapYears.isLeapYear(500);
+    });
+  }
+
+  @Test
   void areNotLeapYearsCheck(){
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.isLeapYear(2023), equalTo(false));
@@ -29,5 +38,4 @@ public class LeapYearsTest
     assertThat(leapYears.isLeapYear(2003), equalTo(false));
     assertThat(leapYears.isLeapYear(1975), equalTo(false));
   }
-
 }
