@@ -28,7 +28,7 @@
       <id>angelinevu</id>
       <name>Angeline Vu</name>
     </developer>
-  </developers>:jjj
+  </developers>
   <build>
     <plugins>
       <plugin>
