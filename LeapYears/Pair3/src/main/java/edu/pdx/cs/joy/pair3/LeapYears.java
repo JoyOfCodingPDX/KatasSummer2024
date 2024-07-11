@@ -7,6 +7,10 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
+  public boolean isLeapYear(int year) {
+    return false;
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
