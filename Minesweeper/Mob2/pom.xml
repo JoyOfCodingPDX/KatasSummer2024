@@ -6,13 +6,13 @@
     <artifactId>minesweeper-parent</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.mob1</groupId>
+  <groupId>edu.pdx.cs.joy.mob2</groupId>
   <artifactId>minesweeper</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Minesweeper Mob 1</name>
-  <description>Minesweeper kata for Mob 1</description>
+  <name>Minesweeper Mob 2</name>
+  <description>Minesweeper kata for Mob 2</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob1.Minesweeper</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob2.Minesweeper</mainClass>
             </manifest>
           </archive>
         </configuration>
