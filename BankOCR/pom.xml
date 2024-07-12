@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>KatasSummer2024</artifactId>
+    <groupId>edu.pdx.cs.joy.katas</groupId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>bankocr-parent</artifactId>
+  <version>1.0.0</version>
+
+  <packaging>pom</packaging>
+  <name>BankOCR Katas Summer 2024</name>
+
+  <modules>
+    <module>Mob1</module>
+<!--    <module>Pair2</module>-->
+<!--    <module>Pair3</module>-->
+<!--    <module>Pair4</module>-->
+<!--    <module>Pair5</module>-->
+<!--    <module>Pair6</module>-->
+<!--    <module>Pair7</module>-->
+<!--    <module>Pair8</module>-->
+<!--    <module>Pair9</module>-->
+<!--    <module>Pair10</module>-->
+<!--    <module>Pair11</module>-->
+<!--    <module>Pair12</module>-->
+<!--    <module>Pair13</module>-->
+<!--    <module>Pair14</module>-->
+<!--    <module>Pair15</module>-->
+  </modules>
+
+</project>
