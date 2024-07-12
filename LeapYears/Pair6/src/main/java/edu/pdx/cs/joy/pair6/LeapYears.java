@@ -11,4 +11,20 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public boolean isLeapYear (int year) {
+    if (year < 1582) {
+      throw new IllegalArgumentException("Year is out of bounds: Please put a year greater than 1581.");
+    }
+    if (year % 400 == 0) {
+      return true;
+    }
+    if (year % 100 == 0 && year % 400 != 0) {
+      return false;
+    }
+    if (year % 100 != 0 && year % 4 == 0) {
+      return true;
+    }
+    return false;
+  }
 }
