@@ -65,4 +65,28 @@ class GildedRoseTest {
         assertThat(app.items[0].sellIn, equalTo(-1));
         assertThat(app.items[0].quality, equalTo(18));
     }
+
+    @Test
+    void qualityOfBackstagePassStaysTheSameBeforeSellInReaches10() {
+        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 17, 20);
+        for (int i = 0; i < 6; i++) {
+            app.updateQuality();
+        }
+        assertThat(app.items[0].sellIn, equalTo(10));
+        assertThat(app.items[0].quality, equalTo(27));
+    }
+
+    @Test
+    void qualityOfBackstagePassIncreasesBy2WhenThereAre10OrFewerDaysLeft() {
+        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 10, 20);
+        assertThat(app.items[0].sellIn, equalTo(9));
+        assertThat(app.items[0].quality, equalTo(22));
+    }
+
+    @Test
+    void qualityOfBackstagePassIncreasesBy3WhenThereAre5OrFewerDaysLeft() {
+        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+        assertThat(app.items[0].sellIn, equalTo(4));
+        assertThat(app.items[0].quality, equalTo(23));
+    }
 }
