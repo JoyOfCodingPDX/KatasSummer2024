@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -41,5 +42,27 @@ class GildedRoseTest {
         GildedRose app = addItemAndUpdateQuality("Aged Brie", 2, 50);
         assertThat(app.items[0].sellIn, equalTo(1));
         assertThat(app.items[0].quality, equalTo(50));
+    }
+
+    @Disabled
+    @Test
+    void qualityOfConjuredItemDecreasesByTwoAtEndOfTheDay() {
+        GildedRose app = addItemAndUpdateQuality("Conjured Item", 3, 6);
+        assertThat(app.items[0].sellIn, equalTo(2));
+        assertThat(app.items[0].quality, equalTo(4));
+    }
+
+    @Test
+    void qualityOfBackstagePassIsZeroAfterDayOfConcert() {
+        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 0, 57);
+        assertThat(app.items[0].sellIn, equalTo(-1));
+        assertThat(app.items[0].quality, equalTo(0));
+    }
+
+    @Test
+    void qualityOfItemDecreasesByTwoAfterItsSellByDateHasPassed() {
+        GildedRose app = addItemAndUpdateQuality("Item", 0, 20);
+        assertThat(app.items[0].sellIn, equalTo(-1));
+        assertThat(app.items[0].quality, equalTo(18));
     }
 }
