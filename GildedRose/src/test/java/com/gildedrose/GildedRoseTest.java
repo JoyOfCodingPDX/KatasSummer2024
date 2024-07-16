@@ -3,6 +3,8 @@ package com.gildedrose;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import static com.gildedrose.GildedRose.AGED_BRIE;
+import static com.gildedrose.GildedRose.BACKSTAGE_PASS;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,14 +34,14 @@ class GildedRoseTest {
 
     @Test
     void agedBrieIncreasesInQualityAtTheEndOfTheDay() {
-        GildedRose app = addItemAndUpdateQuality("Aged Brie", 2, 0);
+        GildedRose app = addItemAndUpdateQuality(AGED_BRIE, 2, 0);
         assertThat(app.items[0].sellIn, equalTo(1));
         assertThat(app.items[0].quality, equalTo(1));
     }
 
     @Test
     void qualityOfAgedBrieNeverExceeds50() {
-        GildedRose app = addItemAndUpdateQuality("Aged Brie", 2, 50);
+        GildedRose app = addItemAndUpdateQuality(AGED_BRIE, 2, 50);
         assertThat(app.items[0].sellIn, equalTo(1));
         assertThat(app.items[0].quality, equalTo(50));
     }
@@ -54,7 +56,7 @@ class GildedRoseTest {
 
     @Test
     void qualityOfBackstagePassIsZeroAfterDayOfConcert() {
-        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 0, 57);
+        GildedRose app = addItemAndUpdateQuality(BACKSTAGE_PASS, 0, 57);
         assertThat(app.items[0].sellIn, equalTo(-1));
         assertThat(app.items[0].quality, equalTo(0));
     }
@@ -68,7 +70,7 @@ class GildedRoseTest {
 
     @Test
     void qualityOfBackstagePassStaysTheSameBeforeSellInReaches10() {
-        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 17, 20);
+        GildedRose app = addItemAndUpdateQuality(BACKSTAGE_PASS, 17, 20);
         for (int i = 0; i < 6; i++) {
             app.updateQuality();
         }
@@ -78,14 +80,14 @@ class GildedRoseTest {
 
     @Test
     void qualityOfBackstagePassIncreasesBy2WhenThereAre10OrFewerDaysLeft() {
-        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 10, 20);
+        GildedRose app = addItemAndUpdateQuality(BACKSTAGE_PASS, 10, 20);
         assertThat(app.items[0].sellIn, equalTo(9));
         assertThat(app.items[0].quality, equalTo(22));
     }
 
     @Test
     void qualityOfBackstagePassIncreasesBy3WhenThereAre5OrFewerDaysLeft() {
-        GildedRose app = addItemAndUpdateQuality("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+        GildedRose app = addItemAndUpdateQuality(BACKSTAGE_PASS, 5, 20);
         assertThat(app.items[0].sellIn, equalTo(4));
         assertThat(app.items[0].quality, equalTo(23));
     }
