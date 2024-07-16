@@ -27,6 +27,7 @@ accordingly
     <module>FizzBuzz</module>
     <module>LeapYears</module>
     <module>GildedRose</module>
+    <module>Diamond</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
