@@ -12,6 +12,12 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            if (item instanceof PlainItem) {
+                PlainItem plain = (PlainItem) item;
+                plain.updateQuality();
+                continue;
+            }
+
             if (!item.name.equals(AGED_BRIE)
               && !item.name.equals(BACKSTAGE_PASS)) {
                 if (item.quality > 0) {

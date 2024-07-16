@@ -12,10 +12,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GildedRoseTest {
 
     private static GildedRose addItemAndUpdateQuality(String itemName, int sellIn, int quality) {
-        Item[] items = new Item[] { new Item(itemName, sellIn, quality) };
+        Item item = new Item(itemName, sellIn, quality);
+        return addItemAndUpdateQuality(item);
+    }
+
+    private static GildedRose addItemAndUpdateQuality(Item item) {
+        Item[] items = new Item[] {item};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         return app;
+    }
+
+    private GildedRose addPlainItemAndUpdateQuality(String itemName, int sellIn, int quality) {
+        return addItemAndUpdateQuality(new PlainItem(itemName, sellIn, quality));
     }
 
     @Test
@@ -27,7 +36,7 @@ class GildedRoseTest {
 
     @Test
     void itemQualityDecreasesByOneAtTheEndOfTheDay() {
-        GildedRose app = addItemAndUpdateQuality("Item", 10, 20);
+        GildedRose app = addPlainItemAndUpdateQuality("Item", 10, 20);
         assertThat(app.items[0].sellIn, equalTo(9));
         assertThat(app.items[0].quality, equalTo(19));
     }
@@ -91,4 +100,26 @@ class GildedRoseTest {
         assertThat(app.items[0].sellIn, equalTo(4));
         assertThat(app.items[0].quality, equalTo(23));
     }
+
+    @Test
+    void qualityOfItemNeverDropsBelowZero() {
+        GildedRose app = addItemAndUpdateQuality("Time", 5, 0);
+        assertThat(app.items[0].sellIn, equalTo(4));
+        assertThat(app.items[0].quality, equalTo(0));
+    }
+
+    @Test
+    void qualityOfPlainItemNeverDropsBelowZero() {
+        GildedRose app = addPlainItemAndUpdateQuality("Time", 5, 0);
+        assertThat(app.items[0].sellIn, equalTo(4));
+        assertThat(app.items[0].quality, equalTo(0));
+    }
+
+    @Test
+    void qualityOfPlainItemDecreasesByTwoAfterItsSellByDateHasPassed() {
+        GildedRose app = addPlainItemAndUpdateQuality("Item", 0, 20);
+        assertThat(app.items[0].sellIn, equalTo(-1));
+        assertThat(app.items[0].quality, equalTo(18));
+    }
+
 }
