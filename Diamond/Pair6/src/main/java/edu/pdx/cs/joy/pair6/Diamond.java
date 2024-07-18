@@ -28,6 +28,19 @@ public class Diamond {
     return diamond;
   }
 
+  public static String createLine(int lineIndex, int letterIndex) {
+    String line = "";
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (int i = 0; i < letterIndex; i++) {
+      line += " ";
+    }
+
+    line = alphabet.charAt(letterIndex) + line + alphabet.charAt(letterIndex);
+
+    return line;
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
