@@ -14,4 +14,9 @@ public class Diamond {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean verifyArgument(String args) {
+
+    return false;
+  }
 }
