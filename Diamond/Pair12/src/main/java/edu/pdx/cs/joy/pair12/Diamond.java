@@ -9,9 +9,22 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Diamond {
+  void printLine(int letter, int steps, int spaces) {
+   System.out.println((char)letter);
+  }
+
+  static Boolean validateInput(String input) {
+    int letter = input.toCharArray()[0];
+      return input.length() == 1 && letter > 64 && letter < 91;
+  }
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0)
+      return;
+
+    if (validateInput(args[0])) {
+     System.out.println("hi");
+    }
   }
 }
