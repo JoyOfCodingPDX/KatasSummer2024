@@ -11,7 +11,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
-  private static final String[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+  private static final String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   @VisibleForTesting
   public static void main(String[] args) {
@@ -19,6 +19,6 @@ public class Diamond {
   }
 
   public static int get_index(String letter) {
-    return ArrayUtils.indexOf(alphabet, letter.toUpperCase());
+    return alphabet.indexOf(letter.toUpperCase());
   }
 }
