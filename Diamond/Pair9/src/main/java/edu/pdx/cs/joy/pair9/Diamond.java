@@ -26,7 +26,11 @@ public class Diamond {
     return '0';
   }
 
-  public static String diamondString(char a) {
+  public static Integer diamondString(Character ch) {
+
+    Integer index = Character.getNumericValue(ch);
+
+    return index;
 
   }
 }

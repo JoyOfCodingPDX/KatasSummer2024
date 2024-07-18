@@ -28,4 +28,9 @@ public class DiamondTest
     assertEquals(Diamond.diamondString('A'), "A");
   }
 
+  @Test
+  void printDiamondB() {
+    assertEquals(Diamond.diamondString('B'), " A\nB B\n A\n");
+  }
+
 }
