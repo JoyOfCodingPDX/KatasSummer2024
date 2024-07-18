@@ -10,11 +10,6 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
-    @VisibleForTesting
-    String getRow(char currentLetter, char targetLetter) {
-        return null;
-    }
-
     public static void printDiamond(char ch){
         int n = ch - 'A';
 
@@ -24,9 +19,28 @@ public class Diamond {
                 System.out.print(" ");
             }
             System.out.print((char)('A' + i));
-
+            if (i > 0) {
+                for (int j = 0; j < (i-1)*2+1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print((char)('A' + i));
+            }
+            System.out.println();
         }
-
+        // Print lower part
+        for (int i = n-1; i >= 0; i--) {
+            for (int j = n; j > i; j--) {
+                System.out.print(" ");
+            }
+            System.out.print((char)('A' + i));
+            if (i > 0) {
+                for (int j = 0; j < (i-1)*2+1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print((char)('A' + i));
+            }
+            System.out.println();
+        }
     }
 
     @VisibleForTesting
@@ -37,10 +51,6 @@ public class Diamond {
         }
 
         char targetLetter = args[0].charAt(0);
-        StringBuilder builder = new StringBuilder();
-        // for char c from firstC to char lastC
-        // answer += getRow(c, lastC)
-        // for char c from lastC-1 to firstC
-        // answer += getRow(c, lastC)
+        printDiamond(targetLetter);
     }
 }

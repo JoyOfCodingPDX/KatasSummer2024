@@ -26,5 +26,21 @@ class DiamondIT extends InvokeMainTestCase {
     assertExpectedOutput(result, "A", "");
   }
 
+  @Test
+  void testNoArgs() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "");
+    assertExpectedOutput(result, "", "Missing command line arguments");
+  }
 
+  @Test
+  void testBadArgs() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "AA");
+    assertExpectedOutput(result, "", "Invalid command line arguments");
+
+    InvokeMainTestCase.MainMethodResult result2 = invokeMain(Diamond.class, "1");
+    assertExpectedOutput(result2, "", "Invalid command line arguments");
+
+    InvokeMainTestCase.MainMethodResult result3 = invokeMain(Diamond.class, "A", "B");
+    assertExpectedOutput(result3, "", "Invalid command line arguments");
+  }
 }
