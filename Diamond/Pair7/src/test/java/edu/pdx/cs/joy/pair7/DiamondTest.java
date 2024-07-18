@@ -12,12 +12,11 @@ public class DiamondTest extends InvokeMainTestCase
 {
 
   private InvokeMainTestCase.MainMethodResult invokeMain(String... args) {
-    return invokeMain( DiamondTest.class, args );
+    return invokeMain(Diamond.class, args );
   }
 
   @Test
   void canInstantiateKataClass() {
-
     Diamond d = new Diamond();
     assertThat(d, instanceOf(Diamond.class));
   }
@@ -27,7 +26,10 @@ public class DiamondTest extends InvokeMainTestCase
     MainMethodResult result = invokeMain();
     assertThat(result.getTextWrittenToStandardOut(), is("test"));
   }
-
-
+  @Test
+  void testSingleA() {
+    MainMethodResult result = invokeMain("A");
+    assertThat(result.getTextWrittenToStandardOut(), is("A"));
+  }
 
 }

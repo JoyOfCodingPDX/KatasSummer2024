@@ -103,6 +103,12 @@
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>33.1.0-jre</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 
   <profiles>
