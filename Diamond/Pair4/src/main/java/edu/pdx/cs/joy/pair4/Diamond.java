@@ -12,6 +12,18 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    //System.err.println("Missing command line arguments");
+    char letter = 'C';
+    int n = letter - 'A';
+
+    for(int i = 0; i<=n; ++i)
+    {
+      //Print whitespace
+      for(int j =0; j < n;++j) {
+        System.out.print(n - i);
+      }
+
+      //Print first character
+    }
   }
 }

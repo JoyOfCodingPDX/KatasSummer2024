@@ -10,6 +10,14 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  public int getDistanceFromA(char letter) {
+    return letter - 'A';
+  }
+
+  public String buildLine(int spaces, char letter) {
+    return "   A";
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
