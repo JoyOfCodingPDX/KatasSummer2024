@@ -14,8 +14,46 @@ public class Diamond {
     return letter - 'A';
   }
 
-  public String buildLine(int spaces, char letter) {
-    return "   A";
+  public String buildLine(int spacesBefore,int spacesBetween, char letter) {
+    StringBuilder sp = new StringBuilder();
+
+    sp.append(" ".repeat(Math.max(0, spacesBefore)));
+
+    sp.append(letter);
+
+    if (spacesBetween > 0 )
+    {
+        sp.append(" ".repeat(spacesBetween));
+        sp.append(letter);
+    }
+    return sp.toString();
+  }
+
+  public String diamondString(char letter) {
+    StringBuilder sb = new StringBuilder();
+    int distanceFromA = this.getDistanceFromA(letter);
+    int spaceBefore = distanceFromA;
+    int spaceBetween = 0;
+    char currentLetter = 'A';
+
+    for (int i = 0; i <= distanceFromA; i++) {
+      sb.append(this.buildLine(spaceBefore, spaceBetween,currentLetter));
+      sb.append("\n");
+      spaceBetween += spaceBetween == 0 ? 1 : 2;
+      spaceBefore--;
+      currentLetter = (char) (currentLetter + 1);
+    }
+
+    for (int i = distanceFromA; i >= 0; i--) {
+      spaceBetween -= spaceBetween == 1 ? 1 : 2;
+      spaceBefore++;
+      currentLetter = (char) (currentLetter - 1);
+      sb.append(this.buildLine(spaceBefore, spaceBetween, currentLetter));
+      sb.append("\n");
+    }
+
+
+    return sb.toString();
   }
 
   @VisibleForTesting
