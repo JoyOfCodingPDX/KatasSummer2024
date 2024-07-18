@@ -15,6 +15,7 @@ public class Diamond {
 
   static Boolean validateInput(String input) {
     int letter = input.toCharArray()[0];
+    System.out.println(letter);
       return input.length() == 1 && letter > 64 && letter < 91;
   }
 
