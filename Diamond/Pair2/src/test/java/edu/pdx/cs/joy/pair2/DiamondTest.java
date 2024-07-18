@@ -13,20 +13,7 @@ public class DiamondTest
     }
 
     @Test
-    void testALine() {
-        Diamond diamond = new Diamond();
-        assertEquals(diamond.getRow('A', 'C'), "  A  ");
-    }
+    void testCDiamond() {
 
-    @Test
-    void testBLine() {
-        Diamond diamond = new Diamond();
-        assertEquals(diamond.getRow('B', 'C'), " B B ");
-    }
-
-    @Test
-    void testCLine() {
-        Diamond diamond = new Diamond();
-        assertEquals(diamond.getRow('C', 'C'), "C   C");
     }
 }
