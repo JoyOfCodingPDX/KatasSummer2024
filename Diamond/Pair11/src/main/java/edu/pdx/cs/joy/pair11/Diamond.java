@@ -14,8 +14,19 @@ public class Diamond {
     return letter - 'A';
   }
 
-  public String buildLine(int spaces, char letter) {
-    return "   A";
+  public String buildLine(int spacesBefore,int spacesBetween, char letter) {
+    StringBuilder sp = new StringBuilder();
+
+    sp.append(" ".repeat(Math.max(0, spacesBefore)));
+
+    sp.append(letter);
+
+    if (spacesBetween > 0 )
+    {
+        sp.append(" ".repeat(spacesBetween));
+        sp.append(letter);
+    }
+    return sp.toString();
   }
 
   @VisibleForTesting
