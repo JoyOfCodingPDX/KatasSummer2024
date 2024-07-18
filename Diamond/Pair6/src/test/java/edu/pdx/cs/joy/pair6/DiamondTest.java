@@ -2,25 +2,31 @@ package edu.pdx.cs.joy.pair6;
 
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class DiamondTest
 {
-  public static Diamond canInstantiateKataClass() {
-    return new Diamond();
+  @Test
+  void canInstantiateKataClass() {
+    new Diamond();
   }
 
   @Test
-  public static void testThatAEqualsA() {
-    Diamond diamond = canInstantiateKataClass();
-    assertThat(diamond.createDiamond("A"), equalTo(String("A")));
+  void testThatAEqualsA() {
+  Diamond diamond = new Diamond();
+    assertThat(diamond.createDiamond("A"), equalTo("A"));
   }
 
   @Test
-  public static void testThatBEqualsB() {
-    Diamond diamond = canInstantiateKataClass();
-    assertThat(diamond.createDiamond("B"), equalTo(String("A\nB B\nA")));
+  void testThatBEqualsB() {
+    Diamond diamond = new Diamond();
+    assertThat(diamond.createDiamond("B"), equalTo("A\nB B\nA"));
   }
 
+  @Test
+  void testThatCEqualsC() {
+    Diamond diamond = new Diamond();
+    assertThat(diamond.createDiamond("C"), equalTo("A\nB B\nA"));
+  }
 }
