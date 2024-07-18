@@ -26,10 +26,17 @@ public class DiamondTest extends InvokeMainTestCase
     MainMethodResult result = invokeMain();
     assertThat(result.getTextWrittenToStandardOut(), is("test"));
   }
+
   @Test
   void testSingleA() {
     MainMethodResult result = invokeMain("A");
     assertThat(result.getTextWrittenToStandardOut(), is("A"));
+  }
+
+  @Test
+  void testSingleB() {
+    MainMethodResult result = invokeMain("B");
+    assertThat(result.getTextWrittenToStandardOut(), is(" A \nB B\n A "));
   }
 
 }
