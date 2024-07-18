@@ -24,16 +24,29 @@ public class Diamond {
     return Character.toUpperCase(input) - 'A';
   }
 
-  public
-
-  public static String[][] makeDiamond(Character c) {
-    int charDistance = c - 'A';
-    String[][] result = new String[charDistance][charDistance];
-    return result;
-  }
-
   public char[][] init2DArray(int distance) {
     char[][] chararray = new char[distance + 1][(distance * 2) + 1];
     return chararray;
+  }
+
+  public char[][] makeDiamond(char c) {
+    int distance = getDistance(c);
+    char[][] array = init2DArray(distance);
+
+    int left, right;
+    left = right = distance;
+
+
+    char currentChar = 'A';
+    for (int i = 0; i <= distance; ++i) {
+      array[i][left--] = currentChar;
+      array[i][right++] = currentChar;
+      ++currentChar;
+    }
+    return array;
+  }
+
+  public void displayDiamond(char[][] diamond) {
+
   }
 }

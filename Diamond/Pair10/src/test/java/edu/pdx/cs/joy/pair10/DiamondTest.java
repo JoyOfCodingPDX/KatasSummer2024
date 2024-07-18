@@ -13,13 +13,17 @@ public class DiamondTest
     new Diamond();
   }
 
-  /*@Test
+  @Test
   void letterACreatesCorrectArray() {
-    Character c = 'a';
-    String[][] result = makeDiamond(c);
-    assertThat(result.length, equalTo(1));
-    assertThat(result[0][0], equalTo('A'));
-  }*/
+    Diamond d = new Diamond();
+    char c = 'C';
+    char[][] result = d.makeDiamond(c);
+    assertEquals(result[0][2], 'A');
+    assertEquals(result[1][1], 'B');
+    assertEquals(result[1][3], 'B');
+    assertEquals(result[2][0], 'C');
+    assertEquals(result[2][4], 'C');
+  }
 
   @Test
   void getDistanceSuccess(){
@@ -33,7 +37,7 @@ public class DiamondTest
   void init2DArraySuccess(){
     Diamond d = new Diamond();
     char[][] chararray = d.init2DArray(2);
-    assertEquals(chararray[0].length,5);
-
+    assertEquals(chararray[0].length, 5);
+    assertEquals(chararray.length, 3);
   }
 }
