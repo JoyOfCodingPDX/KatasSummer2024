@@ -11,3 +11,8 @@ public class DiamondTest
   }
 
 }
+  @Test
+  void userInputA(){
+  String input = "A";
+  assertThat.
+  }
