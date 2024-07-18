@@ -11,14 +11,29 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
-  private static final String[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+  private static final String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length < 1) {
+      System.err.println("Missing command line arguments");
+    }
+
+    if(args.length > 1) {
+      System.err.println("Invalid command line arguments");
+    }
+
+    if(args[0].length() != 1) {
+      System.err.println("Invalid command line arguments");
+    }
+    if(!Character.isLetter(args[0].charAt(0))) {
+      System.err.println("Invalid command line arguments");
+    }
+
+    int middle_index = get_index(args[0]);
   }
 
   public static int get_index(String letter) {
-    return ArrayUtils.indexOf(alphabet, letter.toUpperCase());
+    return alphabet.indexOf(letter.toUpperCase());
   }
 }

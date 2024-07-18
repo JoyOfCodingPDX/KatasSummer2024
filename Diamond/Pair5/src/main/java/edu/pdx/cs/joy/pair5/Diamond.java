@@ -9,9 +9,24 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Diamond {
-
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    char letter = 'C';
+    int letterNumValue = letter - 'A' + 1;
+    int index = letterNumValue;
+    int startLetter = 'A';
+    for (int i = 0; i < letterNumValue; i++) {
+        makeSpacing(index);
+        char toPrint = (char) startLetter;
+        System.out.print(toPrint);
+        System.out.println('\n');
+        startLetter++;
+        index --;
+    }
   }
+ public static void makeSpacing(int space){
+    for (int i = space; i >=0; i--) {
+       System.out.print(" ");
+    }
+ }
 }
