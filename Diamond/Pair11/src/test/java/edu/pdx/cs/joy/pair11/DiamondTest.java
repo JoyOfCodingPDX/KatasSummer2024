@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair11;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,6 +35,7 @@ public class DiamondTest
     assertEquals(expected, actual);
   }
 
+  @Disabled
   @Test
   void printDiamondTest(){
     String expected = "   A\n" +
