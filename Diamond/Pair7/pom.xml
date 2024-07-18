@@ -26,7 +26,23 @@
     </developer>
     <developer>
       <id>firstNavigator</id>
-      <name>FirstName Last Name</name>
+      <name>Eli Zhang, Pouya Nouri</name>
+    </developer>
+    <developer>
+      <id>secondDriver</id>
+      <name>Eli Zhang</name>
+    </developer>
+    <developer>
+      <id>secondNavigator</id>
+      <name>Eli Zhang, Pouya Nouri</name>
+    </developer>
+    <developer>
+      <id>thirdDriver</id>
+      <name>Pouya Nouri</name>
+    </developer>
+    <developer>
+      <id>thirdNavigator</id>
+      <name>Eli Zhang, Andrew Howard</name>
     </developer>
   </developers>
 
