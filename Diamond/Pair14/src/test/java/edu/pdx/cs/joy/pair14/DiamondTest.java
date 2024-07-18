@@ -18,4 +18,6 @@ public class DiamondTest
     assertEquals(Diamond.get_index("a"), 0);
     assertEquals(Diamond.get_index("Z"), 25);
   }
+
+
 }
