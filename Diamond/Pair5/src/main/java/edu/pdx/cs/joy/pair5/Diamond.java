@@ -13,10 +13,17 @@ public class Diamond {
   public static void main(String[] args) {
     char letter = 'C';
     int letterNumValue = letter - 'A' + 1;
-
-    System.out.println(letterNumValue);
-    System.out.println(letter);
-
-    System.err.println("Missing command line arguments");
+    int startLetter = 'A';
+    for (int i = 0; i < letterNumValue; i++) {
+      System.out.print(" ");
+     char toPrint = (char) startLetter;
+     System.out.print(toPrint);
+     startLetter++;
+    }
   }
+ public void makeSpacing  (int space){
+    for (int i = space; i >=0; i--) {
+       System.out.print(" ");
+    }
+ }
 }

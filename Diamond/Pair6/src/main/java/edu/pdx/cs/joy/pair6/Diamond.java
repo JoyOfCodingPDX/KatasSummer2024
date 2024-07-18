@@ -11,7 +11,29 @@ import com.google.common.annotations.VisibleForTesting;
 public class Diamond {
 
   public static String createDiamond(String letter) {
-    return letter;
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int letterIndex = alphabet.indexOf(letter);
+    String diamond = "";
+
+    for (int i = 0; i <= letterIndex; i++) {
+      diamond += createLine(i, letterIndex);
+    }
+
+    return diamond;
+  }
+
+  public static String createLine(int lineIndex, int letterIndex) {
+    String line = "";
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (int i = 0; i < letterIndex; i++) {
+      line += " ";
+    }
+
+    line = alphabet[letterIndex] + line + alphabet[letterIndex];
+    line += "\n";
+
+    return line;
   }
 
   @VisibleForTesting
