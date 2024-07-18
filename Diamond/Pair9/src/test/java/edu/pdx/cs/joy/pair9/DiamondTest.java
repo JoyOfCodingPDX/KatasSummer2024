@@ -14,7 +14,18 @@ public class DiamondTest
 
   @Test
   void validCommandLineArgument() {
-    assertEquals(Diamond.verifyArgument("A"), true );
+    assertEquals(Diamond.verifyArgument("A"), 'A' );
+    assertEquals(Diamond.verifyArgument("B"), 'B' );
+  }
+
+  @Test
+  void invalidCommandLineArgument() {
+    assertEquals(Diamond.verifyArgument("12312342135234534"), '0' );
+  }
+
+  @Test
+  void printDiamondA() {
+    assertEquals(Diamond.diamondString('A'), "A");
   }
 
 }
