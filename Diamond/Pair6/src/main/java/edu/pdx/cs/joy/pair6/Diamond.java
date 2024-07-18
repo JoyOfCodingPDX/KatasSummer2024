@@ -10,13 +10,19 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
-  public static String createDiamond(String letter) {
+  public String createDiamond(String letter) {
     String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int letterIndex = alphabet.indexOf(letter);
     String diamond = "";
 
-    for (int i = 0; i <= letterIndex; i++) {
+    if (letter == "A")
+     return "A";
+
+    for (int i = 0; i < letterIndex; i++) {
       diamond += createLine(i, letterIndex);
+
+      if (i != letterIndex - 1)
+        diamond += "\n";
     }
 
     return diamond;
@@ -30,8 +36,7 @@ public class Diamond {
       line += " ";
     }
 
-    line = alphabet[letterIndex] + line + alphabet[letterIndex];
-    line += "\n";
+    line = alphabet.charAt(letterIndex) + line + alphabet.charAt(letterIndex);
 
     return line;
   }

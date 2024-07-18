@@ -23,14 +23,27 @@ public class DiamondTest
   @Test
   void printOneLineTest() {
     String expected = "   A";
-    String actual = diamond.buildLine(3, 'A');
+    String actual = diamond.buildLine(3,0, 'A');
     assertEquals(expected, actual);
   }
 
   @Test
   void printBLineTest() {
     String expected = "  B B";
-    String actual = diamond.buildLine(2, 'B');
+    String actual = diamond.buildLine(2, 1,'B');
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  void printDiamondTest(){
+    String expected = "   A\n" +
+                      "  B B\n" +
+                      " C   C\n" +
+                      "D     D\n" +
+                      " C   C\n" +
+                      "  B B\n" +
+                      "   A\n";
+    String actual = diamond.diamondString('D');
     assertEquals(expected, actual);
   }
 

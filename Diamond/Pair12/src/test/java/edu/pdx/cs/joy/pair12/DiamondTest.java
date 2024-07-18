@@ -6,5 +6,6 @@ public class DiamondTest {
   @Test
   public void InputIsALetter() {
 
+
   }
 }

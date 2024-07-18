@@ -15,6 +15,20 @@ public class Diamond {
         return null;
     }
 
+    public static void printDiamond(char ch){
+        int n = ch - 'A';
+
+        // Print upper part
+        for(int i = 0; i <= n; i++){
+            for(int j = n; j > i; j--){
+                System.out.print(" ");
+            }
+            System.out.print((char)('A' + i));
+
+        }
+
+    }
+
     @VisibleForTesting
     public static void main(String[] args) {
         if (args.length == 0) {
