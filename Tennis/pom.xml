@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.everyone.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.everyone.Tennis</mainClass>
             </manifest>
           </archive>
         </configuration>

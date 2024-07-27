@@ -2,12 +2,12 @@ package edu.pdx.cs.joy.everyone;
 
 import org.junit.jupiter.api.Test;
 
-public class KataTest
+public class TennisTest
 {
 
   @Test
   void canInstantiateKataClass() {
-    new Kata();
+    new Tennis();
   }
 
 }
