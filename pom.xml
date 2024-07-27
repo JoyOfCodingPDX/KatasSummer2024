@@ -28,6 +28,7 @@ accordingly
     <module>LeapYears</module>
     <module>GildedRose</module>
     <module>Diamond</module>
+    <module>Tennis</module>
     <module>BankOCR</module>
   </modules>
 
