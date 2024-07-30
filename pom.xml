@@ -29,6 +29,7 @@ accordingly
     <module>GildedRose</module>
     <module>Diamond</module>
     <module>Tennis</module>
+    <module>BankOCR</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
