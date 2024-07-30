@@ -22,11 +22,11 @@
   <developers>
     <developer>
       <id>firstDriver</id>
-      <name>FirstName Last Name</name>
+      <name>Molina Nhoung</name>
     </developer>
     <developer>
-      <id>firstNavigator</id>
-      <name>FirstName Last Name</name>
+      <id>angevu</id>
+      <name>Angeline Vu</name>
     </developer>
   </developers>
 
@@ -102,6 +102,12 @@
       <version>2.1.1</version>
       <classifier>tests</classifier>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>33.1.0-jre</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 

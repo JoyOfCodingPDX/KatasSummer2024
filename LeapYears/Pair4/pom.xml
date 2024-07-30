@@ -13,7 +13,7 @@
 
   <name>Leap Years Pair 4</name>
   <description>Pair 4's Leap Years Kata</description>
-  <url>http://www.cs.pdx.edu</url>
+  <url>https://www.cs.pdx.edu</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,6 +27,10 @@
     <developer>
       <id>student2</id>
       <name>Luke Walker</name>
+    </developer>
+    <developer>
+      <id>student3</id>
+      <name>Daniel Huynh ( joined late )</name>
     </developer>
   </developers>
 
