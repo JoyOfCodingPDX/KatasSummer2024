@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pair14;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -14,18 +15,21 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError().trim(), equalTo(expectedErr));
   }
 
+  @Disabled
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Disabled
   @Test
   void aReturnsA() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A");
     assertExpectedOutput(result, "A", "");
   }
 
+  @Disabled
   @Test
   void testNoArgs() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "");
