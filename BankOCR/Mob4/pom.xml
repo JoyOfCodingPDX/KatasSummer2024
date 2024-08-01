@@ -44,6 +44,10 @@
       <id>mobber6</id>
       <name>FirstName Last Name</name>
     </developer>
+      <developer>
+          <id>luwalker</id>
+          <name>Luke Walker</name>
+      </developer>
   </developers>
 
   <build>
