@@ -14,4 +14,12 @@ public class BankOCR {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static String read(String[][] character) {
+    if (character == {{" _ "},{ "| |"},{"|_|"}})
+    {
+
+    }
+    return null;
+  }
 }
