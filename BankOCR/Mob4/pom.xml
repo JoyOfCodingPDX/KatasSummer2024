@@ -38,16 +38,16 @@
     </developer>
     <developer>
       <id>mobber5</id>
-      <name>FirstName Last Name</name>
+      <name>Louis Nguyen</name>
     </developer>
     <developer>
       <id>mobber6</id>
       <name>Garret Katayama</name>
     </developer>
-      <developer>
-          <id>luwalker</id>
-          <name>Luke Walker</name>
-      </developer>
+    <developer>
+      <id>mobber7</id>
+      <name>Luke Walker</name>
+    </developer>
   </developers>
 
   <build>
