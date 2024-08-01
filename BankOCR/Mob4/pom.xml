@@ -26,7 +26,7 @@
     </developer>
     <developer>
       <id>mobber2</id>
-      <name>FirstName Last Name</name>
+      <name>Ethel Arterberry</name>
     </developer>
     <developer>
       <id>mobber3</id>
@@ -34,7 +34,7 @@
     </developer>
     <developer>
       <id>mobber4</id>
-      <name>FirstName Last Name</name>
+      <name>Angel Lores</name>
     </developer>
     <developer>
       <id>mobber5</id>
@@ -42,8 +42,12 @@
     </developer>
     <developer>
       <id>mobber6</id>
-      <name>FirstName Last Name</name>
+      <name>Garret Katayama</name>
     </developer>
+      <developer>
+          <id>luwalker</id>
+          <name>Luke Walker</name>
+      </developer>
   </developers>
 
   <build>
