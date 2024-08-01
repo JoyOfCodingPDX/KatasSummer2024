@@ -14,8 +14,9 @@ public class BankOCR {
                          "  | _| _||_||_ |_   ||_||_|" +
                          "  ||_  _|  | _||_|  ||_| _|";
 
-  String numberZero = " _ | ||_|";
-  String numberOne = "     |  |";
+  final String numberZero = " _ | ||_|";
+  final String numberOne = "     |  |";
+  final String numberTwo = " _  _||_ ";
 
   @VisibleForTesting
   public static void main(String[] args) {
@@ -24,7 +25,14 @@ public class BankOCR {
 
   public Integer parse(String numToParse) {
     switch (numToParse) {
-      case (numToParse)
+      case (numberZero):
+        return 0;
+      case (numberOne):
+        return 1;
+      case (numberTwo):
+        return 2;
+      default:
+        return -1;
     }
   }
 }

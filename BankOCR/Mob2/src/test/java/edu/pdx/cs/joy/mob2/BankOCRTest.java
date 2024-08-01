@@ -13,6 +13,12 @@ public class BankOCRTest {
   }
 
   @Test
+  void canParseTheNumber0() {
+    BankOCR bankOCR = new BankOCR();
+    assertThat(bankOCR.parse(" _ | ||_|"), equalTo(0));
+  }
+
+  @Test
   void canParseTheNumber1() {
     BankOCR bankOCR = new BankOCR();
 
