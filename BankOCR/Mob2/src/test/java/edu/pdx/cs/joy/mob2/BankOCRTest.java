@@ -19,4 +19,10 @@ public class BankOCRTest {
    assertThat(bankOCR.parse("     |  |"), equalTo(1));
   }
 
+  @Test
+  void canParseTheNumber2() {
+    BankOCR bankOCR = new BankOCR();
+    assertThat(bankOCR.parse(" _  _||_ "), equalTo(2));
+  }
+
 }
