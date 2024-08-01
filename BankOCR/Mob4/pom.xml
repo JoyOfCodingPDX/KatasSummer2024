@@ -44,6 +44,10 @@
       <id>mobber6</id>
       <name>Garret Katayama</name>
     </developer>
+      <developer>
+          <id>luwalker</id>
+          <name>Luke Walker</name>
+      </developer>
   </developers>
 
   <build>
