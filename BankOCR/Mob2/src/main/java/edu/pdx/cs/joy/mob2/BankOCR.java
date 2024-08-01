@@ -14,6 +14,9 @@ public class BankOCR {
                          "  | _| _||_||_ |_   ||_||_|" +
                          "  ||_  _|  | _||_|  ||_| _|";
 
+  String numberZero = " _ | ||_|";
+  String numberOne = "     |  |";
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
@@ -21,7 +24,7 @@ public class BankOCR {
 
   public Integer parse(String numToParse) {
     switch (numToParse) {
-      case()
+      case (numToParse)
     }
   }
 }
