@@ -10,12 +10,17 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class BankOCR {
 
+  String pipeReference = "    _  _     _  _  _  _  _ " +
+                         "  | _| _||_||_ |_   ||_||_|" +
+                         "  ||_  _|  | _||_|  ||_| _|";
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
 
-  public void parse(String numToParse) {
+  public Integer parse(String numToParse) {
+
 
 
   }

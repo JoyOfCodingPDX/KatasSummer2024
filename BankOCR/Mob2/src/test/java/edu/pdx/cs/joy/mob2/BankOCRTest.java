@@ -16,7 +16,7 @@ public class BankOCRTest {
   void canParseTheNumber1() {
     BankOCR bankOCR = new BankOCR();
 
-   assertThat(bankOCR.parse("1"), equalTo(1));
+   assertThat(bankOCR.parse("     |  |"), equalTo(1));
   }
 
 }
