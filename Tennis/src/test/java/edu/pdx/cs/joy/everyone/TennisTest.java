@@ -46,6 +46,13 @@ public class TennisTest
     assertThat(player2Score, equalTo("15"));
   }
 
+  @Test
+  void Player1CanWin() {
+    Tennis t = new Tennis();
+    t.player1Scores();
+
+  }
+
 }
 
 

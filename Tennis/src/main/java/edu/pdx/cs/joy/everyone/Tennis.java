@@ -10,7 +10,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Tennis {
 
-  String[] scores = {"Love", "15", "30", "40"};
+  String[] scores = {"Love", "15", "30", "40", "Deuce", "Advantage"};
   int player1Index = 0;
   int player2Index = 0;
 
