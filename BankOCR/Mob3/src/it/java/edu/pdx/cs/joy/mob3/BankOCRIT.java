@@ -12,13 +12,19 @@ class BankOCRIT extends InvokeMainTestCase {
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain();
-    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+    assertThat(result.getTextWrittenToStandardError(), containsString("Too few command line arguments"));
   }
 
   @Test
   void testInitialCommandLineArgs() {
     MainMethodResult result = invokeMain("    _  _     _  _  _  _  _ ", "  | _| _||_||_ |_   ||_||_|",  "||_  _|  | _||_|  ||_| _|");
     assertThat(result.getTextWrittenToStandardOut(), containsString("    _  _     _  _  _  _  _ "));
+  }
+
+  @Test
+  void validInputToBeTurnedIntoDigits() {
+    MainMethodResult result = invokeMain("    _  _     _  _  _  _  _ ", "  | _| _||_||_ |_   ||_||_|",  "||_  _|  | _||_|  ||_| _|");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("123456789"));
   }
 
 }
