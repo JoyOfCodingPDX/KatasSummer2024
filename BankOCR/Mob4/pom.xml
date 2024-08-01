@@ -48,14 +48,10 @@
       <id>mobber6</id>
       <name>Garret Katayama</name>
     </developer>
-<<<<<<< HEAD
-
-=======
-      <developer>
-          <id>luwalker</id>
-          <name>Luke Walker</name>
-      </developer>
->>>>>>> d917dd94d299cfc3e34a2a80ce24ca45afe64e97
+    <developer>
+      <id>mobber7</id>
+      <name>Luke Walker</name>
+    </developer>
   </developers>
 
   <build>
