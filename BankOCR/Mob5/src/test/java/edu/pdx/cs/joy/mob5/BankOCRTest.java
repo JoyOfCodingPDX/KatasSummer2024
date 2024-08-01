@@ -14,9 +14,17 @@ public class BankOCRTest
   }
 
   @Test
-  void canReadNumber() {
+  void canReadZero() {
     BankOCR bankOCR = new BankOCR();
-    String[][] character = {{" _ "},{ "| |"},{"|_|"}};
-    assertThat(BankOCR.read(), equalTo("0"));
+    String character[][] = {{" _ "},{ "| |"},{"|_|"}};
+    assertThat(bankOCR.read(character), equalTo("0"));
   }
+
+  @Test
+  void canReadOne() {
+    BankOCR bankOCR = new BankOCR();
+    String character[][] = {{"   "},{ "  |"},{"  |"}};
+    assertThat(bankOCR.read(character), equalTo("1"));
+  }
+
 }
