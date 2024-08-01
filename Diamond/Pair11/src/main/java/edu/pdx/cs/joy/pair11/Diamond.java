@@ -44,7 +44,11 @@ public class Diamond {
       currentLetter = (char) (currentLetter + 1);
     }
 
-    for (int i = distanceFromA; i >= 0; i--) {
+    spaceBetween -= spaceBetween == 1 ? 1 : 2;
+    spaceBefore++;
+    currentLetter = (char) (currentLetter - 1);
+
+    for (int i = distanceFromA; i > 0; i--) {
       spaceBetween -= spaceBetween == 1 ? 1 : 2;
       spaceBefore++;
       currentLetter = (char) (currentLetter - 1);

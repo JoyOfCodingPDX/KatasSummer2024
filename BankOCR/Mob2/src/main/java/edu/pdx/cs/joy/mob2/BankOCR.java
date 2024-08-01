@@ -20,8 +20,8 @@ public class BankOCR {
   }
 
   public Integer parse(String numToParse) {
-
-
-
+    switch (numToParse) {
+      case()
+    }
   }
 }
