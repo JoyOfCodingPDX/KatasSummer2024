@@ -27,4 +27,25 @@ public class BankOCRTest
     assertThat(bankOCR.read(character), equalTo("1"));
   }
 
+  @Test
+  void canReadTwoToNine() {
+    BankOCR bankOCR = new BankOCR();
+    String two[][] = {{" _ "},{ " _|"},{"|_ "}};
+    String three[][] = {{" _ "},{ " _|"},{" _|"}};
+    String four[][] = {{"   "},{ "|_|"},{"  |"}};
+    String five[][] = {{" _ "},{ "|_ "},{" _|"}};
+    String six[][] = {{" _ "},{ "|_ "},{"|_|"}};
+    String seven[][] = {{" _ "},{ "  |"},{"  |"}};
+    String eight[][] = {{" _ "},{ "|_|"},{"|_|"}};
+    String nine[][] = {{" _ "},{ "|_|"},{" _|"}};
+
+    assertThat(bankOCR.read(two), equalTo("2"));
+    assertThat(bankOCR.read(three), equalTo("3"));
+    assertThat(bankOCR.read(four), equalTo("4"));
+    assertThat(bankOCR.read(five), equalTo("5"));
+    assertThat(bankOCR.read(six), equalTo("6"));
+    assertThat(bankOCR.read(seven), equalTo("7"));
+    assertThat(bankOCR.read(eight), equalTo("8"));
+    assertThat(bankOCR.read(nine), equalTo("9"));
+  }
 }
