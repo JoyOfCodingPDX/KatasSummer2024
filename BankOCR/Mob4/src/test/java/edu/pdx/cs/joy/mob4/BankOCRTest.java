@@ -21,6 +21,11 @@ public class BankOCRTest
 
     assertThat(BankOCR.doOCR(testResult), equalTo("333333333"));
   }
+  @Test
+  void getDigitTest(){
+    String testInput = " _ \n" + " _|\n" + " _|";
+    assertThat(BankOCR.getDigit(testInput,0), equalTo(3));
+  }
 
   @Test
   void canInstantiateKataClass() {
