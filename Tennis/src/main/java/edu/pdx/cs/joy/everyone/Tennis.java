@@ -15,4 +15,11 @@ public class Tennis {
     System.err.println("Missing command line arguments");
   }
 
+  public String getPlayer1Score() {
+    return "Love";
+  }
+
+  public String getPlayer2Score() {
+    return "Love";
+  }
 }
