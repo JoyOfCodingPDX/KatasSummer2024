@@ -22,27 +22,34 @@
   <developers>
     <developer>
       <id>mobber1</id>
-      <name>FirstName Last Name</name>
+      <name>Angeline Vu</name>
     </developer>
     <developer>
       <id>mobber2</id>
-      <name>FirstName Last Name</name>
+      <name>Molina Nhoung</name>
     </developer>
     <developer>
       <id>mobber3</id>
-      <name>FirstName Last Name</name>
+      <name>Olivia Zhang</name>
     </developer>
     <developer>
       <id>mobber4</id>
-      <name>FirstName Last Name</name>
+      <name>Henry Sides</name>
     </developer>
     <developer>
       <id>mobber5</id>
-      <name>FirstName Last Name</name>
+
+      <name>Karla Martinez</name>
+
+
     </developer>
     <developer>
       <id>mobber6</id>
-      <name>FirstName Last Name</name>
+      <name>Amrit Thapa</name>
+    </developer>
+    <developer>
+      <id>mobber7</id>
+      <name> free </name>
     </developer>
   </developers>
 

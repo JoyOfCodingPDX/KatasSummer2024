@@ -22,29 +22,40 @@
   <developers>
     <developer>
       <id>mobber1</id>
+<<<<<<< HEAD
       <name>Louis Nguyen</name>
+=======
+      <name>Robert Krah</name>
+>>>>>>> d917dd94d299cfc3e34a2a80ce24ca45afe64e97
     </developer>
     <developer>
       <id>mobber2</id>
-      <name>FirstName Last Name</name>
+      <name>Ethel Arterberry</name>
     </developer>
     <developer>
       <id>mobber3</id>
-      <name>FirstName Last Name</name>
+      <name>Dinh Nguyen</name>
     </developer>
     <developer>
       <id>mobber4</id>
-      <name>FirstName Last Name</name>
+      <name>Angel Lores</name>
     </developer>
     <developer>
       <id>mobber5</id>
-      <name>FirstName Last Name</name>
+      <name>Louis Nguyen</name>
     </developer>
     <developer>
       <id>mobber6</id>
-      <name>FirstName Last Name</name>
+      <name>Garret Katayama</name>
     </developer>
+<<<<<<< HEAD
 
+=======
+      <developer>
+          <id>luwalker</id>
+          <name>Luke Walker</name>
+      </developer>
+>>>>>>> d917dd94d299cfc3e34a2a80ce24ca45afe64e97
   </developers>
 
   <build>
