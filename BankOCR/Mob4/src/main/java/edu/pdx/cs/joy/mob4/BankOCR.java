@@ -14,4 +14,14 @@ public class BankOCR {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static String doOCR(String input) {
+    return "";
+  }
+
+  private static int getDigit (String input, int startPos) {
+    int digit = 0;
+
+    return digit;
+  }
 }
