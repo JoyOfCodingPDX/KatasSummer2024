@@ -14,6 +14,15 @@ public class BankOCRTest
   }
 
   @Test
+  void threeThreeThreeTest() {
+    String testResult = " _  _  _  _  _  _  _  _  _ \n" +
+                        " _| _| _| _| _| _| _| _| _|\n" +
+                        " _| _| _| _| _| _| _| _| _|";
+
+    assertThat(BankOCR.doOCR(testResult), equalTo("333333333"));
+  }
+
+  @Test
   void canInstantiateKataClass() {
     new BankOCR();
   }

@@ -18,4 +18,10 @@ public class BankOCR {
   public static String doOCR(String input) {
     return "";
   }
+
+  private static int getDigit (String input, int startPos) {
+    int digit = 0;
+
+    return digit;
+  }
 }
