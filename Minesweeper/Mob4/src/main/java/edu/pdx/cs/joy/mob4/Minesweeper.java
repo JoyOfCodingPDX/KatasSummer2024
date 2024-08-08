@@ -4,25 +4,25 @@ import com.google.common.annotations.VisibleForTesting;
 
 /**
  * A class for getting started with a code kata
- *
+ * <p>
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
 public class Minesweeper {
 
-  @VisibleForTesting
-  public static void main(String[] args) {
-      String[] argSplit = args[0].split("\n");
-      int[] dimensions = getBoardSize(argSplit[0]);
-      char[][] board = new char[dimensions[0]][dimensions[1]];
+    @VisibleForTesting
+    public static void main(String[] args) {
+        String[] argSplit = args[0].split("\n");
+        int[] dimensions = getBoardSize(argSplit[0]);
+        char[][] board = new char[dimensions[0]][dimensions[1]];
 
-      for (int i = 0; i < board.length; i++) {
-          for (int j = 0; j < board[0].length; j++) {
-              board[i][j] = argSplit[i+1].charAt(j);
-          }
-      }
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                board[i][j] = argSplit[i + 1].charAt(j);
+            }
+        }
 
-      // char[][] solution = solveMinesweeper(board);
+        // char[][] solution = solveMinesweeper(board);
 
 
       /*
@@ -34,26 +34,40 @@ public class Minesweeper {
        */
 
 
-  }
+    }
 
-  public static char[][] solveMinesweeper(char[][] board) {
-      char[][] solution = new char[board.length][board[0].length];
+    public static char[][] solveMinesweeper(char[][] board) {
+        char[][] solution = new char[board.length][board[0].length];
 
 
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == '*') {
+                    solution[i][j] = '*';
+                    for (int k = -1; k <= 1; k++) {
+                        for (int l = -1; l <= 1; l++) {
+                            if (k == 0 && l == 0) continue;
+                            solution[i + k][j + l] = magicIncrementFunction(solution[i + k][j + l]);
+                        }
+                    }
+                }
+            }
+        }
 
-      return solution;
-  }
 
-  public static int[] getBoardSize(String dimensions) {
+        return solution;
+    }
 
-    int column = 0;
-    int row = 0;
+    public static int[] getBoardSize(String dimensions) {
 
-    column = Integer.parseInt(dimensions.split(" ")[0]);
-    row = Integer.parseInt(dimensions.split(" ")[1]);
+        int column = 0;
+        int row = 0;
 
-    int[] dimensionsArray = {row, column};
+        column = Integer.parseInt(dimensions.split(" ")[0]);
+        row = Integer.parseInt(dimensions.split(" ")[1]);
 
-    return dimensionsArray;
-  }
+        int[] dimensionsArray = {row, column};
+
+        return dimensionsArray;
+    }
 }

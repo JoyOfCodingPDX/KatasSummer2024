@@ -1,5 +1,7 @@
 package edu.pdx.cs.joy.mob1;
 
+import java.text.ParseException;
+
 import com.google.common.annotations.VisibleForTesting;
 
 /**
@@ -16,8 +18,14 @@ public class Minesweeper {
       System.err.println("Missing command line arguments");
     }
 
-    int rows = Integer.parseInt(args[0]);
-    int columns = Integer.parseInt(args[1]);
+    try{
+      int rows = Integer.parseInt(args[0]);
+      int columns = Integer.parseInt(args[1]);
+    }
+    catch(ParseException e){
+
+    }
+    
 
     Character[][] field = new Character[rows][columns];
     for (int i = 2; i < args.length; ++i) {
@@ -29,7 +37,9 @@ public class Minesweeper {
     for (int i = 0; i < columns; ++i) {
       for (int j = 0; j < rows; ++j) {
         int count = 0;
-        if (i - 1 >= 0) {
+        if(field[i][j] != '*')
+        {
+          if (i - 1 >= 0) {
           if (j - 1 >= 0) {
             if (field[i-1][j-1] == '*')
               ++count;
@@ -56,10 +66,21 @@ public class Minesweeper {
         }
         if (j - 1 >= 0) {
           if (field[i][j - 1] == '*') {
-           //FILL
+            ++count;
           }
         }
+        if(j+1 < rows){
+          if(field[i][j+1] == '*'){
+            ++count;
+          }
+        }
+        field[i][j] = (char)count;
+        
       }
+        System.out.print(field[i][j]);
+      }
+      System.out.println();
     }
+    
   }
 }
