@@ -14,5 +14,20 @@ class MinesweeperIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void canGetBoardSize() {
+    MainMethodResult result = invokeMain(Minesweeper.class, "4 4\n" +
+            "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....");
+
+    assertThat(result.getTextWrittenToStandardOut(), containsString("4, 4"));
+
+
+
+  }
+
+
 
 }
