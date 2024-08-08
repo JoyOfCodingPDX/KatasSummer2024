@@ -21,4 +21,9 @@ public class BoardClassTest {
         BoardClass bc = new BoardClass(input);
         assertThat(bc.incrementBoard(), equals(expected));
     }
+
+    @Test
+    void updateTest() {
+
+    }
 }
