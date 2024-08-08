@@ -3,6 +3,7 @@ package edu.pdx.cs.joy.mob3;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
@@ -50,18 +51,14 @@ public class MinesweeperTest
             "....";
     Minesweeper obj = new Minesweeper(grid);
 
-//
-//    Character[][] twoDGrid = new {};
-//    for (int i = 0; )
+    ArrayList<String> lines = new ArrayList<String>(Arrays.asList(obj.grid.split("\n")));
+    ArrayList<char[]> twoDGrid = new ArrayList<>();
+    boolean ignoredFirst = false;
+    for (String line : lines) {
+      if (!ignoredFirst) ignoredFirst = true;
+      else twoDGrid.add(line.toCharArray());
+    }
 
-    ArrayList<ArrayList<Character>> twoDGrid = new ArrayList<ArrayList<Character>>();
-
-    /*
-    [
-      ["*", ".", ".", "."],
-      [".", ".", ".", "."]
-    ]
-     */
+    assertThat(twoDGrid.get(2)[1], equalTo('*'));
   }
-
 }

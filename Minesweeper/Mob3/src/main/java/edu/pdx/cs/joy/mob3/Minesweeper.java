@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.mob3;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * A class for getting started with a code kata
  *
@@ -10,12 +13,13 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
     public String grid = null;
-    public Integer x;
-    public Integer y;
+    public Integer x, y;
+    public ArrayList<char[]> grid2d;
 
     public Minesweeper (String grind) {
         this.grid = grind;
         parseSize();
+        parseGrid();
     }
 
     public Minesweeper() {}
@@ -27,6 +31,16 @@ public class Minesweeper {
         String line = grid.split("\n")[0];
         this.x = Integer.parseInt(line.split(" ")[0]);
         this.y = Integer.parseInt(line.split(" ")[1]);
+    }
+
+    public void parseGrid() {
+        this.grid2d = new ArrayList<>();
+        ArrayList<String> lines = new ArrayList<String>(Arrays.asList(this.grid.split("\n")));
+        boolean ignoredFirst = false;
+        for (String line : lines) {
+            if (!ignoredFirst) ignoredFirst = true;
+            else this.grid2d.add(line.toCharArray());
+        }
     }
 
     //public Integer getSize(){}
