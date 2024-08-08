@@ -36,9 +36,15 @@ public class Minesweeper {
             System.err.println(e.getMessage());
         }
     }
+
     public char getNum(int y, int x){
+        if(this.y > 1){
+            //grid.get[]
+
+        }
         return '1';
     }
+
 
     public void parseGrid() {
         this.grid2d = new ArrayList<>();
