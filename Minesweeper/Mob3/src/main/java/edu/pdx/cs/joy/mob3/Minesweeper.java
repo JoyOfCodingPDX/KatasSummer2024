@@ -14,7 +14,11 @@ public class Minesweeper {
   public Minesweeper (String grind){
    this.grid = grind;
   }
+
   public Minesweeper(){}
+
+  //public Integer getSize(){}
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
