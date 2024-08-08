@@ -26,8 +26,12 @@ public class Minesweeper {
         throw new IllegalArgumentException("Error: row out of range " + number);
       }
       if (col < 0 || col > 100) {
-        throw new IllegalArgumentException("Error: col out of range " + number);
+        throw new IllegalArgumentException("Error: col out of range " + number1);
       }
+
+      this.row = row;
+      this.col = col;
+
   }
 
   public int getRow() {
