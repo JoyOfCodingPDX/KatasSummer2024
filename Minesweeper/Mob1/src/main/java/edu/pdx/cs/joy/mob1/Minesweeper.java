@@ -16,16 +16,50 @@ public class Minesweeper {
       System.err.println("Missing command line arguments");
     }
 
-    int m = Integer.parseInt(args[0]);
-    int n = Integer.parseInt(args[1]);
+    int rows = Integer.parseInt(args[0]);
+    int columns = Integer.parseInt(args[1]);
 
-    Character[][] field = new Character[m][n];
+    Character[][] field = new Character[rows][columns];
     for (int i = 2; i < args.length; ++i) {
-      for (int j = 0; j < n; ++j) {
+      for (int j = 0; j < columns; ++j) {
         field[i-2][j] = args[i].charAt(j);
       }
     }
 
-    for (int i = 0; i < n; )
+    for (int i = 0; i < columns; ++i) {
+      for (int j = 0; j < rows; ++j) {
+        int count = 0;
+        if (i - 1 >= 0) {
+          if (j - 1 >= 0) {
+            if (field[i-1][j-1] == '*')
+              ++count;
+          }
+          if (j + 1 < rows) {
+            if (field[i-1][j+1] == '*')
+              ++count;
+          }
+          if (field[i-1][j] == '*')
+            ++count;
+        }
+
+        if (i + 1 < columns) {
+          if (j - 1 >= 0) {
+            if (field[i+1][j-1] == '*')
+              ++count;
+          }
+          if (j + 1 < rows) {
+            if (field[i+1][j+1] == '*')
+              ++count;
+          }
+          if (field[i+1][j] == '*')
+            ++count;
+        }
+        if (j - 1 >= 0) {
+          if (field[i][j - 1] == '*') {
+           //FILL
+          }
+        }
+      }
+    }
   }
 }
