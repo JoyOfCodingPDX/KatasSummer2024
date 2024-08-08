@@ -9,7 +9,12 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Minesweeper {
+ public String grid = null;
 
+  public Minesweeper (String grind){
+   this.grid = grind;
+  }
+  public Minesweeper(){}
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
