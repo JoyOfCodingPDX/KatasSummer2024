@@ -39,6 +39,19 @@ public class Minesweeper {
     public static char[][] solveMinesweeper(char[][] board) {
         char[][] solution = new char[board.length][board[0].length];
 
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                solution[i][j] = 0;
+            }
+        }
+
+//        // Print the array to verify
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < cols; j++) {
+//                System.out.print(array[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
@@ -47,7 +60,7 @@ public class Minesweeper {
                     for (int k = -1; k <= 1; k++) {
                         for (int l = -1; l <= 1; l++) {
                             if (k == 0 && l == 0) continue;
-                            solution[i + k][j + l] = magicIncrementFunction(solution[i + k][j + l]);
+                            solution[i + k][j + l] = getMagicIncrementFunction(solution[i + k][j + l]);
                         }
                     }
                 }
@@ -56,6 +69,15 @@ public class Minesweeper {
 
 
         return solution;
+    }
+
+    private static char getMagicIncrementFunction(char c) {
+        if (c == '*') {
+            return c;
+        } else {
+            return (char) (c+1);
+        }
+
     }
 
     public static int[] getBoardSize(String dimensions) {
