@@ -12,7 +12,36 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+      String[] argSplit = args[0].split("\n");
+      int[] dimensions = getBoardSize(argSplit[0]);
+      char[][] board = new char[dimensions[0]][dimensions[1]];
+
+      for (int i = 0; i < board.length; i++) {
+          for (int j = 0; j < board[0].length; j++) {
+              board[i][j] = argSplit[i+1].charAt(j);
+          }
+      }
+
+      // char[][] solution = solveMinesweeper(board);
+
+
+      /*
+        4 4 argSplit[0]
+        .... argSplit[1]
+        .... argSplit[2]
+        .... argSplit[3]
+        .... argSplit[4]
+       */
+
+
+  }
+
+  public static char[][] solveMinesweeper(char[][] board) {
+      char[][] solution = new char[board.length][board[0].length];
+
+
+
+      return solution;
   }
 
   public static int[] getBoardSize(String dimensions) {
