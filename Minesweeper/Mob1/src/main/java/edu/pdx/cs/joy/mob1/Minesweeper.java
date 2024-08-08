@@ -18,69 +18,67 @@ public class Minesweeper {
       System.err.println("Missing command line arguments");
     }
 
-    try{
-      int rows = Integer.parseInt(args[0]);
-      int columns = Integer.parseInt(args[1]);
-    }
-    catch(ParseException e){
+    int rows;
+    int columns;
 
-    }
-    
-
-    Character[][] field = new Character[rows][columns];
-    for (int i = 2; i < args.length; ++i) {
-      for (int j = 0; j < columns; ++j) {
-        field[i-2][j] = args[i].charAt(j);
+    try {
+      rows = Integer.parseInt(args[0]);
+      columns = Integer.parseInt(args[1]);
+      Character[][] field = new Character[rows][columns];
+      for (int i = 2; i < args.length; ++i) {
+        for (int j = 0; j < columns; ++j) {
+          field[i - 2][j] = args[i].charAt(j);
+        }
       }
-    }
 
-    for (int i = 0; i < columns; ++i) {
-      for (int j = 0; j < rows; ++j) {
-        int count = 0;
-        if(field[i][j] != '*')
-        {
-          if (i - 1 >= 0) {
-          if (j - 1 >= 0) {
-            if (field[i-1][j-1] == '*')
-              ++count;
-          }
-          if (j + 1 < rows) {
-            if (field[i-1][j+1] == '*')
-              ++count;
-          }
-          if (field[i-1][j] == '*')
-            ++count;
-        }
+      for (int i = 0; i < columns; ++i) {
+        for (int j = 0; j < rows; ++j) {
+          int count = 0;
+          if (field[i][j] != '*') {
+            if (i - 1 >= 0) {
+              if (j - 1 >= 0) {
+                if (field[i - 1][j - 1] == '*')
+                  ++count;
+              }
+              if (j + 1 < rows) {
+                if (field[i - 1][j + 1] == '*')
+                  ++count;
+              }
+              if (field[i - 1][j] == '*')
+                ++count;
+            }
 
-        if (i + 1 < columns) {
-          if (j - 1 >= 0) {
-            if (field[i+1][j-1] == '*')
-              ++count;
+            if (i + 1 < columns) {
+              if (j - 1 >= 0) {
+                if (field[i + 1][j - 1] == '*')
+                  ++count;
+              }
+              if (j + 1 < rows) {
+                if (field[i + 1][j + 1] == '*')
+                  ++count;
+              }
+              if (field[i + 1][j] == '*')
+                ++count;
+            }
+            if (j - 1 >= 0) {
+              if (field[i][j - 1] == '*') {
+                ++count;
+              }
+            }
+            if (j + 1 < rows) {
+              if (field[i][j + 1] == '*') {
+                ++count;
+              }
+            }
+            field[i][j] = (char) count;
+            System.out.print(field[i][j]);
           }
-          if (j + 1 < rows) {
-            if (field[i+1][j+1] == '*')
-              ++count;
-          }
-          if (field[i+1][j] == '*')
-            ++count;
         }
-        if (j - 1 >= 0) {
-          if (field[i][j - 1] == '*') {
-            ++count;
-          }
-        }
-        if(j+1 < rows){
-          if(field[i][j+1] == '*'){
-            ++count;
-          }
-        }
-        field[i][j] = (char)count;
-        
+        System.out.println();
       }
-        System.out.print(field[i][j]);
-      }
-      System.out.println();
+    } catch (Exception e) {
+      System.err.println(e.getMessage());
+      return;
     }
-    
   }
 }
