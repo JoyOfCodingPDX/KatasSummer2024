@@ -28,6 +28,23 @@ public class MinesweeperTest
     String args = "3 4";
     Minesweeper mine = new Minesweeper();
 
+    char [][] input = {
+            {'*','.','.', '.'},
+            {'.','.','.','.'},
+            {'.','*','.','.'},
+            {'.','.','.','.'}
+    };
+
+
+    String s = "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....";
+    //mine.parseInput(s)
+
+
+
+
 
     assertEquals(mine.fieldArray[0].length(), 4);
     assertEquals(mine.fieldArray.length(), 3);
