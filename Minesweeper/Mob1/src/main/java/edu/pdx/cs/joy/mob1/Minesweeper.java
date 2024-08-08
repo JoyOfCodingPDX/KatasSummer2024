@@ -31,8 +31,8 @@ public class Minesweeper {
         }
       }
 
-      for (int i = 0; i < columns; ++i) {
-        for (int j = 0; j < rows; ++j) {
+      for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < columns; ++j) {
           int count = 0;
           if (field[i][j] != '*') {
             if (i - 1 >= 0) {
@@ -40,7 +40,7 @@ public class Minesweeper {
                 if (field[i - 1][j - 1] == '*')
                   ++count;
               }
-              if (j + 1 < rows) {
+              if (j + 1 < columns) {
                 if (field[i - 1][j + 1] == '*')
                   ++count;
               }
@@ -48,12 +48,12 @@ public class Minesweeper {
                 ++count;
             }
 
-            if (i + 1 < columns) {
+            if (i + 1 < rows) {
               if (j - 1 >= 0) {
                 if (field[i + 1][j - 1] == '*')
                   ++count;
               }
-              if (j + 1 < rows) {
+              if (j + 1 < columns) {
                 if (field[i + 1][j + 1] == '*')
                   ++count;
               }
@@ -65,14 +65,14 @@ public class Minesweeper {
                 ++count;
               }
             }
-            if (j + 1 < rows) {
+            if (j + 1 < columns) {
               if (field[i][j + 1] == '*') {
                 ++count;
               }
             }
-            field[i][j] = (char) count;
-            System.out.print(field[i][j]);
+            field[i][j] = (char) (count + '0');
           }
+          System.out.print(field[i][j]);
         }
         System.out.println();
       }

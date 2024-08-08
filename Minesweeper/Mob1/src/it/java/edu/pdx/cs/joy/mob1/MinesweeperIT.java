@@ -30,4 +30,22 @@ class MinesweeperIT extends InvokeMainTestCase {
     MainMethodResult result = invokeMain("1", "4", ".*..");
     assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
   }
+
+  @Test
+  public void twoDArray() {
+    MainMethodResult result = invokeMain("4", "4", "*...", "....", ".*..", "....");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("*100"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("2210"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1110"));
+  }
+
+  @Test
+  public void oneColumnMoreRowsArray() {
+    MainMethodResult result = invokeMain("4", "4", "*...", "....", ".*..", "....");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("*100"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("2210"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1110"));
+  }
 }
