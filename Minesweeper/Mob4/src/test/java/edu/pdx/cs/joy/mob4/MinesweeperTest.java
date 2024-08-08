@@ -19,6 +19,8 @@ public class MinesweeperTest
     assertThat(Minesweeper.getBoardSize("4 4"), equalTo(new int[]{4, 4}));
   }
 
-
-
+    @Test
+    void canGetMinesweeperSolution() {
+        assertThat(Minesweeper.solveMinesweeper(), equalTo());
+    }
 }
