@@ -37,12 +37,44 @@ public class Minesweeper {
         }
     }
 
-    public char getNum(int y, int x){
-        if(this.y > 1){
-            //grid.get[]
+    public int getNum(int y, int x){
+        int num = 0;
 
+        if (y > 0 && isBomb(y - 1, x)) {
+            num++;
         }
-        return '1';
+        if (x > 0 && isBomb(y, x - 1)) {
+            num++;
+        }
+        if (x < this.x && isBomb(y, x + 1)) {
+            num++;
+        }
+        if (y < this.y && isBomb(y + 1, x)) {
+            num++;
+        }
+
+        // top left corner
+        if (y > 0 && x > 0 && isBomb(y - 1, x - 1)) {
+            num++;
+        }
+        // bottom right corner
+        if (x < this.x && y < this.y && isBomb(y + 1, x + 1)) {
+            num++;
+        }
+        // bottom left corner
+        if (x > 0 && y < this.y && isBomb(y + 1, x - 1)) {
+            num++;
+        }
+        // top right
+        if (x < this.x && y > 0 && isBomb(y - 1, x + 1)) {
+            num++;
+        }
+        
+        return num;
+    }
+
+    public boolean isBomb(int y, int x){
+        return (grid2d.get(y)[x] == '*');
     }
 
 

@@ -69,7 +69,18 @@ public class MinesweeperTest
             ".*..\n" +
             "....";
     Minesweeper obj = new Minesweeper(grid);
-    assertThat(obj.getNum(0,1), equalTo('1'));
-    assertThat(obj.getNum(1,0), equalTo('2'));
+    assertThat(obj.getNum(0,1), equalTo(1));
+    assertThat(obj.getNum(1,0), equalTo(2));
+  }
+
+  @Test
+  void canFindBomb() {
+    String grid ="4 4\n" +
+            "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....";
+    Minesweeper obj = new Minesweeper(grid);
+    assertThat(obj.isBomb(2, 1), equalTo(true));
   }
 }
