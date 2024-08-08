@@ -6,11 +6,11 @@
     <groupId>edu.pdx.cs.joy.katas</groupId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>bankocr-parent</artifactId>
+  <artifactId>minesweeper-parent</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
-  <name>BankOCR Katas Summer 2024</name>
+  <name>Minesweeper Katas Summer 2024</name>
 
   <modules>
     <module>Mob1</module>
