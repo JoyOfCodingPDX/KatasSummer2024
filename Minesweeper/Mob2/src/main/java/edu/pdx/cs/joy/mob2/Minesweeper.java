@@ -9,6 +9,7 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Minesweeper {
+    public char[][] fieldArray;
     private int row;
     private int col;
 
