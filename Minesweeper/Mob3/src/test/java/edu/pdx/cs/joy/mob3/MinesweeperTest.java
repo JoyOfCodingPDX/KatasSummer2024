@@ -69,7 +69,7 @@ public class MinesweeperTest
             ".*..\n" +
             "....";
     Minesweeper obj = new Minesweeper(grid);
-    assertThat(obj.grid2d.get(0)[1], equalTo('1'));
-
+    assertThat(obj.getNum(0,1), equalTo('1'));
+    assertThat(obj.getNum(1,0), equalTo('2'));
   }
 }
