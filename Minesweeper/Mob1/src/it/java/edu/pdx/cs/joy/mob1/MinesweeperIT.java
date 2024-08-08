@@ -8,11 +8,31 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class MinesweeperIT extends InvokeMainTestCase {
 
+  private MainMethodResult invokeMain(String... args) {
+    return invokeMain(Minesweeper.class, args);
+  }
+
+  private static void assertExpectedOutput(MainMethodResult result, String expectedOut, String expectedErr) {
+    assertThat(result.getTextWrittenToStandardOut().trim(), equalTo(expectedOut));
+    assertThat(result.getTextWrittenToStandardError().trim(), equalTo(expectedErr));
+  }
+
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  public void emptyInput() {
+    //m and n cannot be
+    MainMethodResult result = invokeMain("0", "0");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+  }
+
+  @Test
+  public void oneFourInput() {
+    MainMethodResult result = invokeMain("1", "4", ".*..");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
 
 }
