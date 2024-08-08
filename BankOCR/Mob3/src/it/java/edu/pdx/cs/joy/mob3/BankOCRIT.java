@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob3;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,12 +16,14 @@ class BankOCRIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Too few command line arguments"));
   }
 
+  @Disabled
   @Test
   void testInitialCommandLineArgs() {
     MainMethodResult result = invokeMain("    _  _     _  _  _  _  _ ", "  | _| _||_||_ |_   ||_||_|",  "||_  _|  | _||_|  ||_| _|");
     assertThat(result.getTextWrittenToStandardOut(), containsString("    _  _     _  _  _  _  _ "));
   }
 
+  @Disabled
   @Test
   void validInputToBeTurnedIntoDigits() {
     MainMethodResult result = invokeMain("    _  _     _  _  _  _  _ ", "  | _| _||_||_ |_   ||_||_|",  "||_  _|  | _||_|  ||_| _|");

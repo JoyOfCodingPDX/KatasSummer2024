@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.mob4;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -7,6 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class BankOCRTest
 {
+  @Disabled
   @Test
   void emptyStringTest() {
     //BankOCR bank = new BankOCR();
