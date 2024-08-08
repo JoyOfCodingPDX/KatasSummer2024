@@ -24,6 +24,11 @@ public class Minesweeper {
     try {
       rows = Integer.parseInt(args[0]);
       columns = Integer.parseInt(args[1]);
+
+      if (rows > 100 || columns > 100) {
+        throw new IllegalArgumentException("Dimensions too large—dimensions larger than 100x100 are illegal");
+      }
+
       Character[][] field = new Character[rows][columns];
       for (int i = 2; i < args.length; ++i) {
         for (int j = 0; j < columns; ++j) {

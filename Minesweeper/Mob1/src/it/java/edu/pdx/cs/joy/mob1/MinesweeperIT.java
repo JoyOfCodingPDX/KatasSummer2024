@@ -42,10 +42,17 @@ class MinesweeperIT extends InvokeMainTestCase {
 
   @Test
   public void oneColumnMoreRowsArray() {
-    MainMethodResult result = invokeMain("4", "4", "*...", "....", ".*..", "....");
-    assertThat(result.getTextWrittenToStandardOut(), containsString("*100"));
-    assertThat(result.getTextWrittenToStandardOut(), containsString("2210"));
-    assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
-    assertThat(result.getTextWrittenToStandardOut(), containsString("1110"));
+    MainMethodResult result = invokeMain("4", "1", ".", ".", "*", ".");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("0"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("*"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1"));
   }
+
+  @Test
+  public void tooLargeArray() {
+    MainMethodResult result = invokeMain("101", "101", "*...", "....", ".*..", "....");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Dimensions too large—dimensions larger than 100x100 are illegal"));
+  }
+
 }
