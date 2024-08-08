@@ -1,8 +1,12 @@
 package edu.pdx.cs.joy.mob2;
 
 public class BoardClass {
+    int rowsize;
+    int colsize;
     BoardClass(char[][] inputBoard) {
         this.inputBoard = inputBoard;
+        this.rowsize = inputBoard.length;
+        this.colsize = inputBoard[0].length;
     }
 
     char[][] resultBoard;
@@ -22,17 +26,30 @@ public class BoardClass {
         }
     }
 
-    private void update(int row, int column) {
-        if (row + 1 < resultBoard.length) {
-            resultBoard[row + 1][column] = (char) (resultBoard[row + 1][column] + 1);
+    private void update(int rowIndex, int colIndex) {
+
+        for (int row = rowIndex - 1 ; row <=  rowIndex + 1; ++row ){
+            for (int col = colIndex -1 ; col <=  colIndex + 1; ++col) {
+                // Ignore negative positions
+                if (row < 0 || col < 0) {
+                    continue;
+                }
+                // This is the mine
+                if (row == rowIndex && col == colIndex) {
+                    continue;
+                }
+                if (row >= rowsize) continue;
+                if (col >= colsize) continue;
+
+                resultBoard[rowIndex + 1][colIndex] = (char) (resultBoard[rowIndex + 1][colIndex] + 1);
+            }
+
+            
+
+
+            }
+
         }
 
-        if (row - 1 >= 0) {
-            resultBoard[row - 1][column] = (char) (resultBoard[row - 1][column] + 1);
-        }
-
-        if (column + 1 <= resultBoard[0].length) {
-            resultBoard[row][column + 1] = (char) (resultBoard[row][column + 1] + 1);
-        }
     }
 }
