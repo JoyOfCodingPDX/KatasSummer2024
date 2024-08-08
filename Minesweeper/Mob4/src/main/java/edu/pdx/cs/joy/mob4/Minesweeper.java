@@ -41,7 +41,7 @@ public class Minesweeper {
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                solution[i][j] = 0;
+                solution[i][j] = '0';
             }
         }
 
@@ -60,6 +60,8 @@ public class Minesweeper {
                     for (int k = -1; k <= 1; k++) {
                         for (int l = -1; l <= 1; l++) {
                             if (k == 0 && l == 0) continue;
+                            if (i+k < 0 || i+k >= board.length) continue;
+                            if (j+l < 0 || j+l >= board[0].length) continue;
                             solution[i + k][j + l] = getMagicIncrementFunction(solution[i + k][j + l]);
                         }
                     }
@@ -71,7 +73,7 @@ public class Minesweeper {
         return solution;
     }
 
-    private static char getMagicIncrementFunction(char c) {
+    public static char getMagicIncrementFunction(char c) {
         if (c == '*') {
             return c;
         } else {
