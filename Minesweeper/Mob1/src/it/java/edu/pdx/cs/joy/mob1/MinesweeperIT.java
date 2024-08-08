@@ -12,6 +12,11 @@ class MinesweeperIT extends InvokeMainTestCase {
     return invokeMain(Minesweeper.class, args);
   }
 
+  private static void assertExpectedOutput(MainMethodResult result, String expectedOut, String expectedErr) {
+    assertThat(result.getTextWrittenToStandardOut().trim(), equalTo(expectedOut));
+    assertThat(result.getTextWrittenToStandardError().trim(), equalTo(expectedErr));
+  }
+
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class);
