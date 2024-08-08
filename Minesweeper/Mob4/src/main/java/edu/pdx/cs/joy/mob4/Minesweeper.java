@@ -15,7 +15,16 @@ public class Minesweeper {
     System.err.println("Missing command line arguments");
   }
 
-  public static void getBoardSize() {
+  public static int[] getBoardSize(String dimensions) {
 
+    int column = 0;
+    int row = 0;
+
+    column = Integer.parseInt(dimensions.split(" ")[0]);
+    row = Integer.parseInt(dimensions.split(" ")[1]);
+
+    int[] dimensionsArray = {row, column};
+
+    return dimensionsArray;
   }
 }
