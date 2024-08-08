@@ -29,8 +29,15 @@ public class Minesweeper {
      */
     public void parseSize() {
         String line = grid.split("\n")[0];
-        this.x = Integer.parseInt(line.split(" ")[0]);
-        this.y = Integer.parseInt(line.split(" ")[1]);
+        try{
+            this.x = Integer.parseInt(line.split(" ")[0]);
+            this.y = Integer.parseInt(line.split(" ")[1]);
+        }catch (NumberFormatException e){
+            System.err.println(e.getMessage());
+        }
+    }
+    public char getNum(int y, int x){
+        return '1';
     }
 
     public void parseGrid() {

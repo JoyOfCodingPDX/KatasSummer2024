@@ -58,7 +58,18 @@ public class MinesweeperTest
       if (!ignoredFirst) ignoredFirst = true;
       else twoDGrid.add(line.toCharArray());
     }
-
     assertThat(twoDGrid.get(2)[1], equalTo('*'));
+  }
+
+  @Test
+  void canLoadNumber(){
+    String grid ="4 4\n" +
+            "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....";
+    Minesweeper obj = new Minesweeper(grid);
+    assertThat(obj.grid2d.get(0)[1], equalTo('1'));
+
   }
 }
