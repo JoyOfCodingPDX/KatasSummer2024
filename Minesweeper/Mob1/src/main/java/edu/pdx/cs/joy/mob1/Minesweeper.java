@@ -12,6 +12,14 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length < 3) {
+      System.err.println("Missing command line arguments");
+    }
+
+    int m = Integer.parseInt(args[0]);
+    int n = Integer.parseInt(args[1]);
+
+    String[][] field = new String[m][n];
+
   }
 }

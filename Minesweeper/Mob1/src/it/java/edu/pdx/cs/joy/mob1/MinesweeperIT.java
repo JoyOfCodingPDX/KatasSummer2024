@@ -18,5 +18,16 @@ class MinesweeperIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  public void emptyInput() {
+    //m and n cannot be
+    MainMethodResult result = invokeMain("0", "0");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+  }
+
+  @Test
+  public void oneFourInput() {
+    MainMethodResult result = invokeMain("1", "4", ".*..");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("1*10"));
 
 }
