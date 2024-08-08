@@ -8,6 +8,10 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class MinesweeperIT extends InvokeMainTestCase {
 
+  private MainMethodResult invokeMain(String... args) {
+    return invokeMain(Minesweeper.class, args);
+  }
+
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class);
